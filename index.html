@@ -1,211 +1,122 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SAM — Sustainable Analytical Model</title>
-  <meta name="description" content="Sustainable Analytical Model (SAM): open-source analytical modelling for energy‑efficient buildings. Overview, basics, modules and links." />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta name="description" content="Open-source analytical modelling for energy-efficient buildings.">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="SAM — Sustainable Analytical Model">
+  <meta property="og:description" content="Open-source analytical modelling for energy-efficient buildings.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sambim.xyz/">
+  <meta property="og:image" content="https://sambim.xyz/assets/SAM_BIM_logo.png">
+  <meta name="twitter:card" content="summary">
+
   <style>
-    :root{
-      --bg:#fff;
-      --panel:#fff;
-      --text:#111;
-      --muted:#444;
-      --line:#111;
-      --red:#d32f2f;
-      --blue:#1565c0;
-      --yellow:#f6c90e;
-      --radius:0;
+    :root {
+      --bg:#ffffff; --panel:#f7f7f9; --text:#111; --muted:#555; --line:#111;
+      --brand:#0d6efd; --brand-2:#6c757d;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg:#0e0e0f; --panel:#121213; --text:#f1f1f1;
+        --muted:#b8b8b8; --line:#f1f1f1; --brand:#4da3ff; --brand-2:#a6adbb;
+      }
     }
     *{box-sizing:border-box}
-    html,body{margin:0;padding:0;color:var(--text);background:var(--bg);font:16px/1.6 Montserrat, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial}
-    a{color:var(--text); text-decoration:none; border-bottom:1px solid transparent}
-    a:hover{border-bottom-color:var(--text)}
-    .container{max-width:1100px; margin:0 auto; padding:0 20px}
-    header.nav{position:sticky; top:0; z-index:10; background:#fff; border-bottom:2px solid var(--line)}
-    .nav-inner{display:flex; align-items:center; justify-content:space-between; padding:14px 0}
-    .logo{display:flex; align-items:center; gap:12px}
-    .logo img{width:28px; height:28px; border-radius:0; filter:grayscale(100%) contrast(120%)}
-    .logo .word{font-weight:700; letter-spacing:.04em; text-transform:uppercase}
-    .chip{display:none}
-    .nav-links a{margin-left:18px; letter-spacing:.06em; text-transform:uppercase; font-weight:600}
-    .hero{padding:72px 0 36px; text-align:center; border-bottom:2px solid var(--line)}
-    .hero h1{text-transform:uppercase; font-size: clamp(26px, 4vw, 40px); line-height:1.15; margin:8px 0}
-    .hero h1::after{content:""; display:block; width:96px; height:6px; margin:12px auto 0; background:linear-gradient(90deg,var(--red) 0 33%, var(--yellow) 33% 66%, var(--blue) 66% 100%)}
-    .hero p{max-width:760px; margin:12px auto 0; color:var(--muted)}
-    .cta{display:flex; justify-content:center; gap:12px; flex-wrap:wrap; margin-top:18px}
-    .btn{display:inline-flex; align-items:center; gap:10px; padding:10px 14px; border:2px solid var(--line); border-radius:0; font-weight:700}
-    .btn.primary{background:var(--red); color:#fff}
-    .btn.secondary{background:transparent}
-    main{padding:28px 0 80px}
-    section{margin:28px 0}
-    .card{background:#fff; border:2px solid var(--line); border-radius:0}
-    .grid{display:grid; gap:20px}
-    .grid.cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
-    .grid.cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
-    @media (max-width:900px){.grid.cols-3{grid-template-columns:1fr 1fr}}
-    @media (max-width:700px){.grid.cols-2,.grid.cols-3{grid-template-columns:1fr}}
-    h2{font-size:20px; margin:0 0 10px; text-transform:uppercase; letter-spacing:.06em}
-    h3{font-size:16px; margin:0 0 6px; text-transform:uppercase; letter-spacing:.05em}
-    .pad{padding:18px}
-    .muted{color:var(--muted)}
-    .kicker{display:inline-block; font-weight:700; color:var(--text); background:transparent; border:none; padding:0 0 2px; font-size:12px; letter-spacing:.12em; text-transform:uppercase}
-    .kicker::before{content:""; display:inline-block; width:10px; height:10px; margin-right:8px; background:var(--yellow)}
-    ul{margin:0; padding-left:18px}
-    .kv{display:grid; grid-template-columns:auto 1fr; gap:8px 12px; align-items:start}
-    .kv .key{text-transform:uppercase; letter-spacing:.06em}
-    footer{border-top:2px solid var(--line); padding:24px 0 60px; color:var(--muted)}
+    body{margin:0;background:var(--bg);color:var(--text);
+         font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,"Helvetica Neue",Arial}
+    a{color:var(--text);text-decoration:none;border-bottom:1px solid rgba(0,0,0,0)}
+    a:hover{border-bottom:1px solid var(--text)}
+    header.nav{position:sticky;top:0;background:var(--panel);
+      border-bottom:1px solid var(--line);padding:10px 16px;
+      display:flex;gap:12px;align-items:center;z-index:10}
+    header.nav img{display:block}
+    header.nav .spacer{flex:1}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;
+         border:1px solid var(--line);background:transparent}
+    .btn.primary{background:var(--brand);color:#fff;border-color:var(--brand)}
+    .btn.secondary{background:transparent;color:var(--text)}
+    .wrap{max-width:980px;margin:0 auto;padding:24px 16px}
+    .hero{display:grid;grid-template-columns:1fr;gap:18px;align-items:center;padding:32px 0}
+    .hero h1{font-size:36px;line-height:1.2;margin:0}
+    .hero p{margin:0;color:var(--muted)}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+           gap:14px;margin:24px 0}
+    .card{background:var(--panel);border:1px solid var(--line);
+          border-radius:16px;padding:16px}
+    footer{margin-top:24px;padding:18px;background:var(--panel);
+           border-top:1px solid var(--line);text-align:center;color:var(--muted)}
+    ul{margin:0 0 0 18px;padding:0}
   </style>
 </head>
+
 <body>
   <header class="nav">
-    <div class="container nav-inner">
-      <div class="logo">
-        <img alt="SAM BIM logo" src="assets/SAM_BIM_logo.png" />
-		<div class="word">Sustainable Analytical Model</div>
-        <span class="chip">Open‑source</span>
-      </div>
-      <nav class="nav-links" aria-label="Primary">
-        <a href="#overview">Overview</a>
-        <a href="#basics">Basics</a>
-        <a href="#modules">Modules</a>
-        <a href="#start">Get started</a>
-        <a href="#resources">Resources</a>
-      </nav>
-    </div>
+    <img src="assets/SAM_BIM_logo.png" alt="SAM logo" width="36" height="36">
+    <div class="spacer"></div>
+    <a class="btn secondary" href="https://github.com/SAM-BIM/SAM_Deploy/releases"
+       target="_blank" rel="noopener noreferrer">Download installer</a>
+    <a class="btn primary" href="https://github.com/SAM-BIM/SAM"
+       target="_blank" rel="noopener noreferrer">View source</a>
   </header>
 
-  <section class="hero container">
-    <img alt="SAM BIM emblem" src="assets/SAM_BIM_logo.png" width="48" height="48" />
-	<h1>SAM — analytical modelling for energy‑efficient buildings</h1>
-    <p class="muted">SAM helps engineers create, validate, and exchange analytical building models across BIM and simulation environments. It links geometry, assumptions, and results into a coherent, reviewable workflow.</p>
-    <div class="cta">
-      <a class="btn primary" href=\"https://github.com/SAM-BIM/SAM_Deploy/releases\" target="_blank" rel="noopener">Download installer</a>
-      <a class="btn secondary" href=\"https://github.com/SAM-BIM/SAM\" target="_blank" rel="noopener">View source</a>
-    </div>
-  </section>
+  <main class="wrap">
+    <section class="hero">
+      <div>
+        <h1>SAM — Sustainable Analytical Model</h1>
+        <p>Open-source analytical modelling toolkit for building energy and environmental design.
+          Canonical upstream: <a href="https://github.com/SAM-BIM/SAM" target="_blank" rel="noopener noreferrer">
+          github.com/SAM-BIM/SAM</a></p>
+      </div>
+    </section>
 
-  <main class="container">
-    <section id="overview" class="card pad">
-      <span class="kicker">Overview</span>
-      <h2>What is SAM?</h2>
-      <p class="muted">SAM (Sustainable Analytical Model) is an open‑source toolkit for building analytical models and running energy and environmental studies. You can import or generate geometry, assign constructions and loads, configure systems, and run simulations — then review and export results.</p>
-      <div class="grid cols-3" style="margin-top:14px">
-        <div class="card pad">
-          <h3>Model creation</h3>
-          <p class="muted">Create models from Revit / IFC / gbXML, or generate and edit directly in Rhino/Grasshopper.</p>
+    <section>
+      <h2>Core concepts</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Interoperability</h3>
+          <p>Push/pull with Revit and Rhino/Grasshopper. Exchange via IFC, gbXML, Excel.
+             Connect to Honeybee, Tas, Topologic, BHoM and more.</p>
         </div>
-        <div class="card pad">
-          <h3>Simulation &amp; analysis</h3>
-          <p class="muted">Use SAM’s engines and connectors to predict performance and compare design options.</p>
+        <div class="card">
+          <h3>Open & Extensible</h3>
+          <p>LGPL-3.0-or-later licensed core. Clean APIs and modular architecture.
+             Contributions welcome via GitHub.</p>
         </div>
-        <div class="card pad">
-          <h3>Extensible</h3>
-          <p class="muted">Easily extend with plugins (e.g., Solar, Psychrometrics, Mollier, Tas, OpenStudio, Ladybug Tools).</p>
+        <div class="card">
+          <h3>Validated</h3>
+          <p>Unit tests and CI. Example datasets referencing PsychroLib 2.5.0 and published benchmarks.</p>
         </div>
       </div>
     </section>
 
-    <section id="basics" class="grid cols-2">
-      <article class="card pad">
-        <span class="kicker">Basics</span>
-        <h2>Core concepts</h2>
-        <ul>
-          <li><strong>Single source of truth:</strong> geometry, assumptions, and results live together for transparent QA.</li>
-          <li><strong>Two object families:</strong> <em>Analytical</em> (Panels, Spaces, Adjacency Cluster, Analytical Model) and <em>Geometry</em> (Face3D, edges, shells).</li>
-          <li><strong>SI units:</strong> SAM uses SI throughout (temperature expressed in °C).</li>
-          <li><strong>Montserratoperability:</strong> push/pull with Revit, Rhino/Grasshopper; exchange via IFC, gbXML, Excel; connect to Honeybee, Tas, Topologic, BHoM and more.</li>
-        </ul>
-      </article>
-      <article class="card pad">
-        <span class="kicker">Objects</span>
-        <h2>Analytical hierarchy</h2>
-        <div class="kv">
-          <div class="key">Panel</div>
-          <div>Wall / Floor / Roof element incl. type, apertures, construction.</div>
-          <div class="key">Adjacency Cluster</div>
-          <div>Relationships between Panels and Spaces.</div>
-          <div class="key">Analytical Model</div>
-          <div>Holds Panels, Spaces, Location, Materials, Profiles, assumptions.</div>
-          <div class="key">Geometry</div>
-          <div>Face3D with external / internal edges; shells delineate space boundaries.</div>
+    <section>
+      <h2>Resources</h2>
+      <div class="cards">
+        <div class="card">
+          <h4>Documentation</h4>
+          <p><a href="https://sam-bim.github.io/#basics" target="_blank" rel="noopener noreferrer">Get started</a> ·
+             <a href="https://github.com/SAM-BIM/SAM/blob/master/README.md" target="_blank" rel="noopener noreferrer">Repo README</a></p>
         </div>
-      </article>
-    </section>
-
-    <section id="modules" class="card pad">
-      <span class="kicker">Modules</span>
-      <h2>Key repositories</h2>
-      <div class="grid cols-3">
-        <div class="card pad">
-          <h3><a href=\"https://github.com/SAM-BIM/SAM_Mollier\" target="_blank" rel="noopener">SAM_Mollier</a></h3>
-          <p class="muted">Psychrometric properties and Mollier charts for HVAC workflows.</p>
+        <div class="card">
+          <h4>Releases</h4>
+          <p><a href="https://github.com/SAM-BIM/SAM_Deploy/releases"
+                target="_blank" rel="noopener noreferrer">Installer &amp; release notes</a></p>
         </div>
-        <div class="card pad">
-          <h3><a href=\"https://github.com/SAM-BIM/SAM_SolarCalculator\" target="_blank" rel="noopener">SAM_SolarCalculator</a></h3>
-          <p class="muted">Solar position &amp; irradiance utilities for façade / PV studies.</p>
-        </div>
-        <div class="card pad">
-          <h3><a href=\"https://github.com/SAM-BIM/SAM_Psychrometrics\" target="_blank" rel="noopener">SAM_Psychrometrics</a></h3>
-          <p class="muted">Thermo‑physical properties and psychrometric helpers.</p>
-        </div>
-        <div class="card pad">
-          <h3><a href=\"https://github.com/SAM-BIM/SAM_IFC\" target="_blank" rel="noopener">SAM_IFC</a></h3>
-          <p class="muted">IFC import/export for BIM interoperability.</p>
-        </div>
-        <div class="card pad">
-          <h3><a href=\"https://github.com/SAM-BIM/SAM_Revit\" target="_blank" rel="noopener">SAM_Revit</a></h3>
-          <p class="muted">Revit connector and workflows for analytical modelling.</p>
-        </div>
-        <div class="card pad">
-          <h3><a href=\"https://github.com/SAM-BIM/SAM_Rhino_UI\" target="_blank" rel="noopener">SAM_Rhino_UI</a></h3>
-          <p class="muted">UI components for Rhino / Grasshopper.</p>
+        <div class="card">
+          <h4>Ecosystem</h4>
+          <p><a href="https://github.com/SAM-BIM" target="_blank" rel="noopener noreferrer">All SAM-BIM repositories</a></p>
         </div>
       </div>
-    </section>
-
-    <section id="start" class="grid cols-2">
-      <div class="card pad">
-        <span class="kicker">Get started</span>
-        <h2>Install</h2>
-        <ol>
-          <li>Grab the latest <a href=\"https://github.com/SAM-BIM/SAM_Deploy/releases\" target="_blank" rel="noopener">SAM installer</a>.</li>
-          <li>Follow the prompts to add SAM to your environment.</li>
-          <li>Optionally build from source in Visual Studio using the <a href=\"https://github.com/SAM-BIM/SAM\" target="_blank" rel="noopener">SAM repository</a>.</li>
-        </ol>
-        <p class=\"muted\">Tested with Rhino 6/7; Revit support varies by release — see installer notes.<\/p>
-      </div>
-      <div class="card pad">
-        <span class="kicker">Workflow</span>
-        <h2>Typical steps</h2>
-        <ol>
-          <li>Import or create project geometry.</li>
-          <li>Define constructions, loads, profiles, and systems.</li>
-          <li>Build the Adjacency Cluster and validate the Analytical Model.</li>
-          <li>Run simulations; compare scenarios; document assumptions &amp; results.</li>
-          <li>Exchange via IFC/gbXML or sync back to Revit.</li>
-        </ol>
-      </div>
-    </section>
-
-    <section id="resources" class="card pad">
-      <span class="kicker">Resources</span>
-      <h2>Documentation & links</h2>
-      <ul>
-        <li><a href=\"https://github.com/SAM-BIM/SAM/wiki\" target="_blank" rel="noopener">SAM Wiki</a> — concepts, roadmap, tutorials</li>
-        <li><a href=\"https://github.com/SAM-BIM/SAM\" target="_blank" rel="noopener">SAM Core repository</a></li>
-        <li><a href=\"https://github.com/SAM-BIM/SAM_Deploy/releases\" target="_blank" rel="noopener">Installers (releases)</a></li>
-        <li><a href=\"https://github.com/SAM-BIM\" target="_blank" rel="noopener">All SAM‑related repositories</a></li>
-      </ul>
     </section>
   </main>
 
   <footer>
-    <div class="container">
-      <div>© <span id="year"></span> SAM (Sustainable Analytical Model). Licensed under LGPL‑3.0.</div>
-    </div>
+    <div>© <span id="year"></span> SAM (Sustainable Analytical Model).
+      Licensed under LGPL-3.0-or-later.</div>
   </footer>
 
   <script>
