@@ -189,11 +189,10 @@
         <span class="kicker">Objects</span>
         <h2>Analytical structure</h2>
         <div class="kv">
-		  <div class="key">Geometry</div><div>Face2D with external/internal edges; shells delineate space boundaries.</div>
-          <div class="key">Panel</div><div>Wall / Floor / Roof incl. type, apertures, construction.</div>
-          <div class="key">Adjacency Cluster</div><div>Relationships between Panels and Spaces.</div>
-          <div class="key">Analytical Model</div><div>Holds Panels, Spaces, Location, Materials, Profiles, assumptions.</div>
-
+		  <div class="key">Geometry</div><div>Stored primarily as Face2D with external/internal edges; 3D Geometry can be reconstructed or queried from Face2D and plane data.</div>
+          <div class="key">Panel</div><div>Wall / Floor / Roof incl. panel type, apertures, construction.</div>
+          <div class="key">Adjacency Cluster</div><div>Holds Panels, Spaces, Zones and relationships between them.</div>
+          <div class="key">Analytical Model</div><div>Holds Adjacency Cluster, Location, Materials and Profile libraries and other assumptions.</div>
         </div>
       </article>
     </section>
