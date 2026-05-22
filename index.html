@@ -4,14 +4,14 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>SAM - Sustainable Analytical Model</title>
-  <meta name="description" content="SAM is an open-source analytical model toolkit connecting BIM, building energy simulation, and HVAC workflow automation." />
+  <meta name="description" content="SAM is an open-source analytical model toolkit connecting Revit, Rhino/Grasshopper, and Tas EDSL for BIM-to-BEM and HVAC workflow automation." />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <link rel="icon" href="assets/SAM_BIM_logo.png" />
   <link rel="canonical" href="https://sambim.xyz/">
 
   <meta property="og:title" content="SAM - Sustainable Analytical Model" />
-  <meta property="og:description" content="Open-source analytical model toolkit for BIM-to-BEM, simulation, and HVAC automation." />
+  <meta property="og:description" content="Open-source analytical model toolkit for Revit, Rhino/Grasshopper, Tas EDSL, and HVAC automation." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="assets/SAM_BIM_logo.png" />
   <meta name="twitter:card" content="summary" />
@@ -139,7 +139,7 @@
     "name":"Sustainable Analytical Model (SAM)",
     "applicationCategory":"EngineeringApplication",
     "operatingSystem":"Windows",
-    "description":"Open-source analytical model toolkit connecting BIM, building energy simulation, and HVAC workflow automation.",
+    "description":"Open-source analytical model toolkit connecting Revit, Rhino/Grasshopper, and Tas EDSL for BIM-to-BEM and HVAC workflow automation.",
     "publisher":{
       "@type":"Organization",
       "name":"SAM-BIM",
@@ -177,9 +177,9 @@
   <section id="top" class="hero">
     <div class="container hero-grid">
       <div>
-        <span class="kicker">Open-source BIM to BEM toolkit</span>
-        <h1>SAM connects BIM, energy simulation, and HVAC automation</h1>
-        <p>SAM (Sustainable Analytical Model) helps engineers turn project geometry and assumptions into reusable analytical building models for validation, attribution, simulation, and repeatable design decisions.</p>
+        <span class="kicker">Revit + Rhino/Grasshopper + Tas EDSL</span>
+        <h1>SAM connects BIM models to Tas-ready analytical workflows</h1>
+        <p>SAM (Sustainable Analytical Model) helps engineers turn Revit and Rhino/Grasshopper geometry into reusable analytical building models for validation, attribution, Tas simulation, and repeatable HVAC decisions.</p>
         <div class="cta">
           <a class="btn primary" href="https://github.com/SAM-BIM/SAM_Deploy/releases/latest" target="_blank" rel="noopener noreferrer">Download installer</a>
           <a class="btn" href="https://github.com/SAM-BIM/SAM" target="_blank" rel="noopener noreferrer">View source</a>
@@ -197,15 +197,15 @@
     <section id="overview" class="band">
       <span class="kicker">Overview</span>
       <h2>What SAM Is</h2>
-      <p class="lead">SAM is a modular .NET/C# toolkit for creating, cleaning, enriching, exchanging, and simulating analytical building models. It sits between authoring tools and simulation engines so project information can be reused instead of rebuilt for every study.</p>
+      <p class="lead">SAM is a modular .NET/C# toolkit for creating, cleaning, enriching, exchanging, and simulating analytical building models. Its primary workflow links Revit and Rhino/Grasshopper with Tas EDSL so project information can be reused instead of rebuilt for every study.</p>
       <div class="grid cols-3" style="margin-top:16px">
         <article class="card">
           <h3>BIM to BEM</h3>
-          <p>Generate analytical panels, spaces, shells, and adjacency clusters from Revit, Rhino, IFC, gbXML, or Grasshopper workflows.</p>
+          <p>Generate analytical panels, spaces, shells, and adjacency clusters from Revit, Rhino, and Grasshopper workflows.</p>
         </article>
         <article class="card">
           <h3>Simulation Ready</h3>
-          <p>Attribute constructions, profiles, internal conditions, openings, and systems before connecting to Tas, OpenStudio, Honeybee, and results workflows.</p>
+          <p>Attribute constructions, profiles, internal conditions, openings, and systems before connecting to Tas EDSL and results workflows.</p>
         </article>
         <article class="card">
           <h3>Reusable Research Platform</h3>
@@ -228,7 +228,7 @@
         <div class="step">
           <span class="num">01</span>
           <strong>Inputs</strong>
-          <span>Revit, Rhino, Grasshopper, IFC, gbXML, Excel, and project geometry.</span>
+          <span>Revit, Rhino, Grasshopper, IFC, gbXML, and project geometry.</span>
         </div>
         <div class="connector">-&gt;</div>
         <div class="step">
@@ -246,7 +246,7 @@
         <div class="step">
           <span class="num">04</span>
           <strong>Simulation + Results</strong>
-          <span>Tas, OpenStudio, Honeybee, gbXML, HVAC scenarios, and post-processing.</span>
+          <span>Tas EDSL, HVAC scenarios, result extraction, and post-processing.</span>
         </div>
       </div>
     </section>
@@ -258,7 +258,7 @@
         <ul>
           <li><strong>Single source of truth:</strong> geometry, loads, profiles, materials, systems, and results can travel together.</li>
           <li><strong>Less manual rebuilding:</strong> BIM data can be converted, repaired, and reused for performance studies.</li>
-          <li><strong>Interoperable by design:</strong> exchange with BIM tools, open object models, and simulation engines.</li>
+          <li><strong>Interoperable by design:</strong> exchange with BIM tools and simulation engines, with Tas EDSL as the main engine focus.</li>
           <li><strong>Transparent and extensible:</strong> open repositories support review, adaptation, and repeatable research.</li>
         </ul>
       </article>
@@ -268,7 +268,7 @@
         <ul>
           <li>Early-stage massing to analytical model generation.</li>
           <li>Revit and Grasshopper workflows for BIM-to-BEM studies.</li>
-          <li>Dynamic simulation setup, load sizing, and result comparison.</li>
+          <li>Tas simulation setup, load sizing, HVAC scenarios, and result comparison.</li>
           <li>Psychrometric HVAC design and reusable HVAC system scenarios.</li>
         </ul>
         <p class="note">SAM supports engineering workflows that contribute to assessment methods. Compliance still depends on the complete project methodology and toolchain.</p>
@@ -311,8 +311,8 @@
           <p>Revit elements such as walls, floors, roofs, rooms, and spaces can be transformed into SAM panels and spaces through Rhino.Inside workflows.</p>
         </article>
         <article class="card">
-          <h3>Tas and OpenStudio integration</h3>
-          <p>SAM supports dynamic simulation pathways through Tas EDSL and OpenStudio/Honeybee connections for load, energy, and scenario studies.</p>
+          <h3>Tas EDSL integration</h3>
+          <p>SAM's main simulation pathway uses Tas EDSL for load, energy, HVAC scenario, and result workflows, with other connectors supporting wider exchange.</p>
         </article>
         <article class="card">
           <h3>Psychrometric HVAC analysis</h3>
@@ -362,16 +362,16 @@
 
     <section id="integrations" class="band">
       <span class="kicker">Integrations</span>
-      <h2>Connect SAM To Your Stack</h2>
+      <h2>Main Workflow And Wider Connectors</h2>
       <div class="grid cols-2">
         <ul>
+          <li><strong>Revit / Rhino.Inside.Revit:</strong> extract BIM elements and spaces into SAM analytical workflows.</li>
           <li><strong>Rhino / Grasshopper:</strong> primary visual workflow layer for model generation, inspection, and parametric studies.</li>
-          <li><strong>Revit / Rhino.Inside.Revit:</strong> extract BIM elements and spaces into analytical workflows.</li>
-          <li><strong>IFC / gbXML / GEM:</strong> exchange analytical model information with common industry formats.</li>
+          <li><strong>Tas EDSL:</strong> main simulation engine focus for dynamic simulation and automated HVAC scenarios.</li>
         </ul>
         <ul>
-          <li><strong>Tas EDSL:</strong> dynamic simulation integration and automated HVAC scenario workflows.</li>
-          <li><strong>OpenStudio / Honeybee:</strong> EnergyPlus-oriented model exchange and simulation workflows.</li>
+          <li><strong>IFC / gbXML / GEM:</strong> exchange analytical model information with common industry formats.</li>
+          <li><strong>OpenStudio / Honeybee:</strong> secondary EnergyPlus-oriented model exchange and simulation workflows.</li>
           <li><strong>Topologic / BHoM:</strong> topology and open AEC object-model interoperability.</li>
         </ul>
       </div>
@@ -404,11 +404,11 @@
       </div>
 
       <div class="module-group">
-        <h3>Simulation engines</h3>
+        <h3>Simulation and HVAC</h3>
         <div class="repo-list">
-          <div class="repo"><a href="https://github.com/SAM-BIM/SAM_Tas" target="_blank" rel="noopener noreferrer">SAM_Tas</a><span>Tas EDSL simulation integration.</span></div>
-          <div class="repo"><a href="https://github.com/SAM-BIM/SAM_OpenStudio" target="_blank" rel="noopener noreferrer">SAM_OpenStudio</a><span>OpenStudio model generation and exchange.</span></div>
-          <div class="repo"><a href="https://github.com/SAM-BIM/SAM_LadybugTools" target="_blank" rel="noopener noreferrer">SAM_LadybugTools</a><span>Ladybug Tools and Honeybee interoperability.</span></div>
+          <div class="repo"><a href="https://github.com/SAM-BIM/SAM_Tas" target="_blank" rel="noopener noreferrer">SAM_Tas</a><span>Main Tas EDSL simulation integration.</span></div>
+          <div class="repo"><a href="https://github.com/SAM-BIM/SAM_OpenStudio" target="_blank" rel="noopener noreferrer">SAM_OpenStudio</a><span>Secondary OpenStudio model generation and exchange.</span></div>
+          <div class="repo"><a href="https://github.com/SAM-BIM/SAM_LadybugTools" target="_blank" rel="noopener noreferrer">SAM_LadybugTools</a><span>Secondary Ladybug Tools and Honeybee interoperability.</span></div>
           <div class="repo"><a href="https://github.com/SAM-BIM/SAM_Systems" target="_blank" rel="noopener noreferrer">SAM_Systems</a><span>Building systems and HVAC system concepts.</span></div>
           <div class="repo"><a href="https://github.com/SAM-BIM/SAM_Multitasker" target="_blank" rel="noopener noreferrer">SAM_Multitasker</a><span>Scenario orchestration and task execution.</span></div>
         </div>
