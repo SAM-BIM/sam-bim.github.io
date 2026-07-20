@@ -1,0 +1,13 @@
+# lychee link-check configuration
+# Bot-blocked domains return 403/999 to automated checkers but work in
+# browsers, so they are excluded here instead of failing the build.
+exclude = [
+  "^https://(www\\.)?linkedin\\.com/",
+  "^https://(www\\.)?researchgate\\.net/",
+]
+
+accept = [200, 204, 206, 429]
+timeout = 20
+retry_wait_time = 4
+max_retries = 2
+max_concurrency = 8

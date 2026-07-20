@@ -1,0 +1,89 @@
+name: Site checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    # Weekly drift check (links, validity) - Monday 06:17 UTC
+    - cron: '17 6 * * 1'
+  workflow_dispatch:
+
+jobs:
+  html-validate:
+    name: HTML validity
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npx --yes html-validate index.html 404.html
+
+  links:
+    name: Link check (lychee)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: lycheeverse/lychee-action@v2
+        with:
+          # 404.html excluded: its root-relative links are valid on the
+          # deployed site but resolve against the filesystem in a local scan.
+          args: --verbose --no-progress --config lychee.toml --exclude-path '^404\.html$' './**/*.html'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  a11y:
+    name: Accessibility smoke (pa11y, WCAG2AA)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: python3 -m http.server 8080 &
+      - run: sleep 2 && npx --yes pa11y-ci
+
+  lighthouse:
+    name: Lighthouse budget (warn-only until imagery phase)
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: python3 -m http.server 8080 &
+      - run: sleep 2 && npx --yes @lhci/cli@0.14.x autorun --collect.url=http://localhost:8080/ --collect.url=http://localhost:8080/404.html --assert.budgetsFile=lighthouse-budget.json --upload.target=temporary-public-storage
+
+  spelling:
+    name: Spelling (cspell, warn-only)
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npx --yes cspell --no-progress index.html 404.html assets/css/site.css README.md
+
+  responsive:
+    name: Responsive screenshots (375/768/1280)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: python3 -m http.server 8080 &
+      - run: npx --yes playwright@latest install chromium --with-deps
+      - run: |
+          sleep 2
+          mkdir -p screenshots
+          for w in 375 768 1280; do
+            npx --yes playwright@latest screenshot --viewport-size="$w,900" --full-page "http://localhost:8080/" "screenshots/home-$w.png"
+          done
+      - uses: actions/upload-artifact@v4
+        with:
+          name: responsive-screenshots
+          path: screenshots/

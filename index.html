@@ -25,21 +25,31 @@
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
-    "@type":"SoftwareApplication",
-    "name":"Sustainable Analytical Model (SAM)",
-    "applicationCategory":"EngineeringApplication",
-    "operatingSystem":"Windows",
-    "description":"Open-source analytical model toolkit connecting Revit, Rhino/Grasshopper, and Tas EDSL for BIM-to-BEM and HVAC workflow automation.",
-    "publisher":{
-      "@type":"Organization",
-      "name":"SAM-BIM",
-      "url":"https://sambim.xyz",
-      "sameAs":["https://www.linkedin.com/company/sambim"]
-    },
-    "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},
-    "license":"https://www.gnu.org/licenses/lgpl-3.0.html",
-    "codeRepository":"https://github.com/SAM-BIM/SAM",
-    "downloadUrl":"https://github.com/SAM-BIM/SAM_Deploy/releases/latest"
+    "@graph":[
+      {
+        "@type":"SoftwareApplication",
+        "name":"Sustainable Analytical Model (SAM)",
+        "applicationCategory":"EngineeringApplication",
+        "operatingSystem":"Windows",
+        "description":"Open-source analytical model toolkit connecting Revit, Rhino/Grasshopper, and Tas EDSL for BIM-to-BEM and HVAC workflow automation.",
+        "publisher":{"@id":"https://sambim.xyz/#org"},
+        "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},
+        "license":"https://www.gnu.org/licenses/lgpl-3.0.html",
+        "codeRepository":"https://github.com/SAM-BIM/SAM",
+        "downloadUrl":"https://github.com/SAM-BIM/SAM_Deploy/releases/latest"
+      },
+      {
+        "@type":"Organization",
+        "@id":"https://sambim.xyz/#org",
+        "name":"SAM-BIM",
+        "url":"https://sambim.xyz",
+        "logo":"https://sambim.xyz/assets/SAM_BIM_logo.png",
+        "sameAs":[
+          "https://github.com/SAM-BIM",
+          "https://www.linkedin.com/company/sambim"
+        ]
+      }
+    ]
   }
   </script>
 </head>
@@ -438,7 +448,7 @@
 
   <footer>
     <div class="container">
-      <div>&copy; <span id="year">2026</span> SAM (Sustainable Analytical Model). Licensed under LGPL-3.0-or-later.</div>
+      <div>&copy; <span id="year">2026</span> SAM (Sustainable Analytical Model). Code: <a href="https://www.gnu.org/licenses/lgpl-3.0.html" target="_blank" rel="noopener noreferrer">LGPL-3.0-or-later</a> &middot; Site content: <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC-BY-4.0</a>.</div>
     </div>
   </footer>
 
