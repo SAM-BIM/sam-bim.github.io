@@ -13,8 +13,10 @@
   <meta property="og:title" content="SAM - Sustainable Analytical Model" />
   <meta property="og:description" content="Open-source analytical model toolkit for Revit, Rhino/Grasshopper, Tas EDSL, and HVAC automation." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="assets/SAM_BIM_logo.png" />
+  <meta property="og:image" content="https://sambim.xyz/assets/SAM_BIM_logo.png" />
+  <meta property="og:url" content="https://sambim.xyz/" />
   <meta name="twitter:card" content="summary" />
+  <meta name="twitter:image" content="https://sambim.xyz/assets/SAM_BIM_logo.png" />
   <meta name="theme-color" content="#111111" />
 
   <style>
@@ -386,8 +388,7 @@
         <h3>Core model</h3>
         <div class="repo-list">
           <div class="repo"><a href="https://github.com/SAM-BIM/SAM" target="_blank" rel="noopener noreferrer">SAM</a><span>Core analytical model objects and workflows.</span></div>
-          <div class="repo"><a href="https://github.com/SAM-BIM/SAM_Solver" target="_blank" rel="noopener noreferrer">SAM_Solver</a><span>Geometry and topology preparation utilities.</span></div>
-          <div class="repo"><a href="https://github.com/SAM-BIM/SAM_Validation" target="_blank" rel="noopener noreferrer">SAM_Validation</a><span>Regression and numerical validation suite.</span></div>
+          <div class="repo"><a href="https://github.com/SAM-BIM/SAM_Validation" target="_blank" rel="noopener noreferrer">SAM_Validation</a><span>Numerical validation against published reference data (ASHRAE, PsychroLib, IAPWS).</span></div>
         </div>
       </div>
 
@@ -421,7 +422,6 @@
           <div class="repo"><a href="https://github.com/SAM-BIM/SAM_Psychrometrics" target="_blank" rel="noopener noreferrer">SAM_Psychrometrics</a><span>Moist-air thermodynamic property calculations.</span></div>
           <div class="repo"><a href="https://github.com/SAM-BIM/SAM_SolarCalculator" target="_blank" rel="noopener noreferrer">SAM_SolarCalculator</a><span>Solar position and irradiance utilities.</span></div>
           <div class="repo"><a href="https://github.com/SAM-BIM/SAM_IAPWS" target="_blank" rel="noopener noreferrer">SAM_IAPWS</a><span>Water and steam properties using IAPWS-IF97.</span></div>
-          <div class="repo"><a href="https://github.com/SAM-BIM/SAM_Acoustic" target="_blank" rel="noopener noreferrer">SAM_Acoustic</a><span>Building acoustic analysis utilities.</span></div>
         </div>
       </div>
 
@@ -432,7 +432,7 @@
           <div class="repo"><a href="https://github.com/SAM-BIM/SAM_Revit_UI" target="_blank" rel="noopener noreferrer">SAM_Revit_UI</a><span>User-facing Revit add-in layer.</span></div>
           <div class="repo"><a href="https://github.com/SAM-BIM/SAM_UI" target="_blank" rel="noopener noreferrer">SAM_UI</a><span>Windows desktop interface for SAM workflows.</span></div>
           <div class="repo"><a href="https://github.com/SAM-BIM/SAM_Excel" target="_blank" rel="noopener noreferrer">SAM_Excel</a><span>Spreadsheet exchange and post-processing.</span></div>
-          <div class="repo"><a href="https://github.com/SAM-BIM/SAM_Python" target="_blank" rel="noopener noreferrer">SAM_Python</a><span>Python integration for custom workflows.</span></div>
+          <div class="repo"><a href="https://github.com/SAM-BIM/SAM_Python" target="_blank" rel="noopener noreferrer">SAM_Python</a><span>Python scripting access (early experimental module).</span></div>
         </div>
       </div>
     </section>
@@ -488,34 +488,31 @@
     <section id="publications" class="band">
       <span class="kicker">Publications</span>
       <h2>Selected Publications</h2>
-      <p class="lead">ResearchGate is the canonical publication destination for SAM. New papers are listed here and linked once their ResearchGate pages are available.</p>
+      <p class="lead">Publications are listed with DOI or proceedings links where available. Author profiles on ResearchGate carry the full list.</p>
 
       <article class="publication">
         <h3>Sustainable Analytical Model (SAM 3.0): A New Approach to Automated HVAC Simulation</h3>
-        <p class="muted">M. Dengusiak, J. Ziolkowski, M. Dengusiak. BSA 2026 review paper.</p>
+        <p class="muted">M. Dengusiak, J. Ziolkowski, M. Dengusiak. BSA 2026.</p>
         <span class="tag">SAM 3.0</span><span class="tag">HVAC automation</span><span class="tag">Tas</span>
-        <p class="coming">ResearchGate page to be added.</p>
+        <p class="coming">Presented at BSA 2026 (Bozen-Bolzano, June 2026); proceedings forthcoming.</p>
       </article>
 
       <article class="publication">
-        <h3>Bridging BIM and BEM: Efficient Generation of Building Energy Models Using the Sustainable Analytical Model (SAM)</h3>
-        <p class="muted">M. Dengusiak, J. Ziolkowski. CESBP 2025.</p>
+        <h3><a href="https://doi.org/10.1007/978-3-032-14011-1_75" target="_blank" rel="noopener noreferrer">Bridging BIM and BEM: Efficient Generation of Building Energy Models Using the Sustainable Analytical Model (SAM)</a></h3>
+        <p class="muted">M. Dengusiak, J. Ziolkowski. CESBP 2025, Lecture Notes in Civil Engineering 795, Springer 2026.</p>
         <span class="tag">BIM to BEM</span><span class="tag">Revit</span><span class="tag">Watertight models</span>
-        <p class="coming">ResearchGate page to be added.</p>
       </article>
 
       <article class="publication">
-        <h3>Introducing SAM_Mollier: An Open-Source Tool for Psychrometric HVAC Analysis</h3>
-        <p class="muted">M. Dengusiak, J. Ziolkowski. CESBP 2025.</p>
+        <h3><a href="https://doi.org/10.1007/978-3-032-14019-7_51" target="_blank" rel="noopener noreferrer">Introducing SAM_Mollier: An Open-Source Tool for Psychrometric HVAC Analysis</a></h3>
+        <p class="muted">M. Dengusiak, J. Ziolkowski. CESBP 2025, Lecture Notes in Civil Engineering 796, pp. 693–708, Springer 2026.</p>
         <span class="tag">SAM_Mollier</span><span class="tag">Psychrometrics</span><span class="tag">HVAC</span>
-        <p class="coming">ResearchGate page to be added.</p>
       </article>
 
       <article class="publication">
-        <h3>Analytical Model (SAM 2.0): A New Frontier in Open-Source Building Energy Simulation</h3>
-        <p class="muted">M. Dengusiak, J. Ziolkowski, M. Dengusiak. BSA 2024.</p>
+        <h3><a href="https://doi.org/10.13124/9788860462022" target="_blank" rel="noopener noreferrer">Analytical Model (SAM 2.0): A New Frontier in Open-Source Building Energy Simulation</a></h3>
+        <p class="muted">M. Dengusiak, J. Ziolkowski, M. Dengusiak. BSA 2024, Bozen-Bolzano University Press 2025.</p>
         <span class="tag">SAM 2.0</span><span class="tag">Simulation</span><span class="tag">Open source</span>
-        <p class="coming">ResearchGate page to be added.</p>
       </article>
 
       <article class="publication">
