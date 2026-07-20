@@ -150,3 +150,11 @@ footer{border-top:2px solid var(--line);padding:24px 0 58px;color:var(--muted)}
   .milestone{grid-template-columns:1fr;gap:6px}
   .btn{width:100%}
 }
+
+/* Spacing utilities (replace inline styles) */
+.mt-10{margin-top:10px}
+.mt-14{margin-top:14px}
+.mt-16{margin-top:16px}
+.mt-22{margin-top:22px}
+.mt-40{margin-top:40px}
+.error-title{font-size:clamp(28px,4vw,44px);text-transform:uppercase;margin:12px 0}

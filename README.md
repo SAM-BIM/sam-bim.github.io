@@ -1,7 +1,7 @@
 # sam-bim.github.io
 SAM-BIM official website
 
-## Licence
+## License
 
 Site content (text and imagery) is licensed under [CC-BY-4.0](LICENSE). The SAM software it describes is licensed separately under LGPL-3.0-or-later — see [SAM-BIM/SAM](https://github.com/SAM-BIM/SAM).
 
