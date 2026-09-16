@@ -6,8 +6,9 @@ SAM-BIM official website
 Screenshots and diagrams referenced by the homepage live in
 [`assets/evidence/`](assets/evidence/README.md). That manifest lists the exact
 filenames (E01–E09, V1, D1), their homepage slots and the drop-in procedure.
-Placeholder slots render cleanly until the captures exist — never commit dummy
-or broken imagery.
+E01–E04 are real SAM captures with their provenance recorded there; the
+remaining IDs are marked as comment slots in `index.html`. Never commit dummy,
+mocked-up or AI-generated imagery.
 
 ## License
 
