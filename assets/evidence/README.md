@@ -21,16 +21,16 @@ this directory and wired into the page; `PENDING` — the slot is marked in
 
 | ID | Filename | Website location | Caption (as published) | Priority | Status |
 |---|---|---|---|---|---|
-| E01 | `E01_SAM_PartF_Design_Airflow_Overlay.png` | Hero; social preview image | Part F airflow requirements and engineering design values reviewed directly on the SAM analytical model. (Legend: F = Part F requirement, D = design airflow.) | Primary | CAPTURED |
+| E01 | `E01_SAM_PartF_Design_Airflow_Overlay.png` | Hero; social preview image | The SAM analytical model in the SAM Analytical desktop app: engineering data reviewed directly on the model, here ventilation requirements beside design airflows. (Legend: F = Part F requirement, D = design airflow.) | Primary | CAPTURED |
 | E01 (detail) | `E01_SAM_PartF_Design_Airflow_Overlay_Detail.png` | Workflow step 01 | Bedroom supply: Part F requires 63 l/s; the design holds 143 l/s. Two quantities on one plan. | Primary | CAPTURED |
 | E02 | `E02_SAM_PartO_Review_Iteration_Authority.png` | Workflow step 02 | The regulatory requirement, engineering design and selected equipment capacity remain separate decisions. | Primary | CAPTURED |
 | E03 | `E03_SAM_PartO_Prepare_Run_Status.png` | Workflow step 03 | SAM materialises the engineering design into a deterministic simulation scenario and records the run state. | Primary | CAPTURED |
 | E04 | `E04_SAM_PartO_TM59_Result.png` | Workflow step 04 | Example TM59 assessment showing the recorded room-level outcome; SAM reports the result rather than forcing a pass. | Primary | CAPTURED |
-| E05 | `E05_SAM_PartO_Iteration2B_Optimisation.png` | Engineering depth — HVAC & ventilation | Iteration 2B capacity-ceiling optimisation | Secondary | PENDING |
-| E06 | `E06_SAM_Analytical_Model_Context.png` | Reserved (SAM README screenshot strip) | Analytical model in context | Primary | PENDING |
-| E07 | `E07_SAM_AHU_Mollier.png` | Engineering depth — Psychrometrics | Air-handling processes on the Mollier chart | Secondary | PENDING |
-| E08 | `E08_SAM_Release_Validation_H1_H12.png` | Engineering depth — Engineering validation | H1–H12 release acceptance evidence | Secondary | PENDING |
-| E09 | `E09_SAM_Revit_Integration.png` | Engineering depth — BIM/BEM interoperability | Revit integration | Secondary | PENDING |
+| E05 | `E05_SAM_PartO_Iteration2B_Optimisation.png` | Capabilities — HVAC & systems | Iteration 2B capacity-ceiling optimisation | Secondary | PENDING |
+| E06 | `E06_SAM_Analytical_Model_Context.png` | Capabilities — Analytical modelling | Analytical model in context | Primary | PENDING |
+| E07 | `E07_SAM_AHU_Mollier.png` | Capabilities — HVAC & systems | Air-handling processes on the Mollier chart | Secondary | PENDING |
+| E08 | `E08_SAM_Release_Validation_H1_H12.png` | Evidence — Release acceptance | H1–H12 release acceptance evidence | Secondary | PENDING |
+| E09 | `E09_SAM_Revit_Integration.png` | Capabilities — BIM & geometry interoperability | Revit integration | Secondary | PENDING |
 | V1 | (video, ~3 min) | Workflow section (VIDEO SLOT comment) | Flagship end-to-end workflow demonstration | Planned | PENDING |
 | D1 | (diagram) | Platform section (ARCHITECTURE SLOT comment) — replaces the CSS stack | SAM platform architecture diagram | Planned | PENDING |
 
@@ -76,13 +76,16 @@ widths are native pixels and have not been upscaled.
 - Part O Iterations 1a / 1b / 2 / 2B (frozen 2026-09-08) may be shown as
   validated capability. Do not show an Iteration 2 acoustic-restriction, bypass
   or boost result: those behaviours are not implemented.
-- Part O Iteration 3 may appear only as **in progress**, and only as what is
-  evidenced: the frozen, licensed-accepted foundation route (explicit MVHR
-  systems in Tas Systems, Reference A vs Candidate B) or the selected-product
-  cooling mode. Never present Iteration 3 as complete (tracker
-  [SAM#111](https://github.com/SAM-BIM/SAM/issues/111) is open), never show
-  manufacturer heat-recovery or fan behaviour (evidence-blocked, fails closed),
-  and never caption a failing TM59 run as a pass.
+- Part O Iteration 3 may be shown as validated capability only for what the
+  [SAM#111](https://github.com/SAM-BIM/SAM/issues/111) final closeout
+  (2026-09-16) accepts: the explicit Systems/TPD ventilation route and the
+  selected-product cooling mode. Never show manufacturer heat-recovery, fan
+  or bypass behaviour: that work is tracked separately in
+  [SAM#123](https://github.com/SAM-BIM/SAM/issues/123) and is not accepted.
+- Never caption a failing TM59 run as a pass.
+- The homepage presents SAM as a platform; Part F / Part O is its flagship
+  example. Keep programme detail (tracker state, open technical questions,
+  evidence gates) in the linked GitHub records, not in homepage copy.
 - No client or project-identifying data, personal or employer file paths,
   usernames, taskbars or other desktop chrome in frame.
 - PNG source captures; keep them legible at ~1100 px rendered width.
