@@ -4,21 +4,23 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>SAM - Sustainable Analytical Model</title>
-  <meta name="description" content="SAM is an open-source analytical model toolkit connecting Revit, Rhino/Grasshopper, and Tas EDSL for BIM-to-BEM and HVAC workflow automation." />
+  <meta name="description" content="SAM is an open-source computational-engineering platform built around a shared analytical building model. It connects BIM, building physics, HVAC systems and simulation through reusable, traceable workflows." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="icon" href="assets/SAM_BIM_logo.png" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+  <link rel="apple-touch-icon" href="assets/SAM_BIM_logo_180.png" />
   <link rel="canonical" href="https://sambim.xyz/">
 
   <meta property="og:title" content="SAM - Sustainable Analytical Model" />
-  <meta property="og:description" content="Open-source analytical model toolkit for Revit, Rhino/Grasshopper, Tas EDSL, and HVAC automation." />
+  <meta property="og:description" content="Open-source computational engineering around one shared analytical building model: BIM, building physics, HVAC systems and simulation in reusable, traceable workflows." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://sambim.xyz/assets/SAM_BIM_logo.png" />
+  <meta property="og:image" content="https://sambim.xyz/assets/evidence/E01_SAM_PartF_Design_Airflow_Overlay.png" />
+  <meta property="og:image:alt" content="SAM analytical model plan view with ventilation requirement and design airflow values for dwelling spaces." />
   <meta property="og:url" content="https://sambim.xyz/" />
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:image" content="https://sambim.xyz/assets/SAM_BIM_logo.png" />
-  <meta name="theme-color" content="#111111" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://sambim.xyz/assets/evidence/E01_SAM_PartF_Design_Airflow_Overlay.png" />
+  <meta name="theme-color" content="#ffffff" />
 
   <link rel="stylesheet" href="assets/css/site.css" />
 
@@ -31,7 +33,7 @@
         "name":"Sustainable Analytical Model (SAM)",
         "applicationCategory":"EngineeringApplication",
         "operatingSystem":"Windows",
-        "description":"Open-source analytical model toolkit connecting Revit, Rhino/Grasshopper, and Tas EDSL for BIM-to-BEM and HVAC workflow automation.",
+        "description":"Open-source computational-engineering platform built around a shared analytical building model, connecting BIM, building physics, HVAC systems and simulation.",
         "publisher":{"@id":"https://sambim.xyz/#org"},
         "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},
         "license":"https://www.gnu.org/licenses/lgpl-3.0.html",
@@ -43,7 +45,7 @@
         "@id":"https://sambim.xyz/#org",
         "name":"SAM-BIM",
         "url":"https://sambim.xyz",
-        "logo":"https://sambim.xyz/assets/SAM_BIM_logo.png",
+        "logo":"https://sambim.xyz/assets/SAM_BIM_logo_180.png",
         "sameAs":[
           "https://github.com/SAM-BIM",
           "https://www.linkedin.com/company/sambim"
@@ -57,398 +59,461 @@
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="nav">
     <div class="container nav-inner">
-      <a class="logo" href="#top" aria-label="SAM home">
-        <img alt="SAM BIM logo" src="assets/SAM_BIM_logo.png" />
-        <span class="word">Sustainable Analytical Model</span>
+      <a class="logo" href="#top">
+        <img alt="" src="assets/SAM_BIM_logo_64.png" width="32" height="32" />
+        <span class="word">SAM <span>Sustainable Analytical Model</span></span>
       </a>
       <details class="nav-menu">
         <summary>Menu</summary>
         <nav class="nav-links" aria-label="Primary">
-          <a href="#overview">Overview</a>
+          <a href="#platform">Platform</a>
           <a href="#capabilities">Capabilities</a>
-          <a href="#modules">Ecosystem</a>
-          <a href="#start">Get started</a>
+          <a href="#workflow">Workflow</a>
+          <a href="#evidence">Evidence</a>
           <a href="#research">Research</a>
-          <a href="#team">Team</a>
+          <a class="nav-gh" href="https://github.com/SAM-BIM" target="_blank" rel="noopener noreferrer">GitHub</a>
         </nav>
       </details>
     </div>
   </header>
 
-  <section id="top" class="hero">
-    <div class="container hero-grid">
-      <div>
-        <span class="kicker">Open source &middot; BIM to BEM &middot; HVAC</span>
-        <h1>From BIM geometry to simulation-ready analytical models</h1>
-        <p>SAM (Sustainable Analytical Model) is an open-source .NET toolkit that turns Revit and Rhino/Grasshopper geometry into reusable analytical building models &mdash; validated, attributed, and simulated with Tas as the primary engine, with psychrometric HVAC design workflows alongside.</p>
-        <div class="cta">
-          <a class="btn primary" href="https://github.com/SAM-BIM/SAM_Deploy/releases/latest" target="_blank" rel="noopener noreferrer">Download installer</a>
-          <a class="btn" href="https://github.com/SAM-BIM/SAM" target="_blank" rel="noopener noreferrer">View source</a>
-          <a class="btn" href="#research">Read publications</a>
-        </div>
-      </div>
-      <div class="hero-media">
-        <img alt="SAM BIM emblem" src="assets/SAM_BIM_logo.png" />
-        <div class="caption">Analytical model as the shared engineering layer</div>
-      </div>
-    </div>
-  </section>
+  <main id="main">
 
-  <main class="container" id="main">
-    <section id="overview" class="band">
-      <span class="kicker">Overview</span>
-      <h2>What SAM Is</h2>
-      <p class="lead">SAM is a modular, open-source .NET/C# toolkit for creating, cleaning, enriching, exchanging, and simulating analytical building models &mdash; the watertight panels, spaces, and adjacency data that energy and HVAC simulation needs. One shared JSON analytical model carries the project from BIM geometry to results, so information is reused instead of rebuilt for every study.</p>
-      <div class="grid cols-3 mt-16">
-        <article class="card">
-          <h3>BIM to BEM</h3>
-          <p>Generate analytical panels, spaces, shells, and adjacency clusters from Revit, Rhino, and Grasshopper workflows.</p>
-        </article>
-        <article class="card">
-          <h3>Simulation Ready</h3>
-          <p>Attribute constructions, profiles, internal conditions, openings, and systems before connecting to Tas and results workflows.</p>
-        </article>
-        <article class="card">
-          <h3>Reusable Research Platform</h3>
-          <p>Use JSON-based analytical objects, validation routines, and extension modules to test repeatable methods across projects and papers.</p>
-        </article>
-      </div>
-      <h3 class="mt-22">Core Analytical Concepts</h3>
-      <div class="grid cols-4">
-        <article class="card">
-          <h3>Geometry</h3>
-          <p>Planar geometry, faces, shells, apertures, and boundary representations used to derive simulation-ready spaces.</p>
-        </article>
-        <article class="card">
-          <h3>Panels</h3>
-          <p>Walls, floors, roofs, apertures, constructions, and thermal properties represented as analytical objects.</p>
-        </article>
-        <article class="card">
-          <h3>Adjacency Cluster</h3>
-          <p>The relationship layer for spaces, zones, panels, and their spatial/topological connections.</p>
-        </article>
-        <article class="card">
-          <h3>Analytical Model</h3>
-          <p>The project container for geometry, location, profiles, materials, internal conditions, systems, and results.</p>
-        </article>
-      </div>
-      <div class="metric-row">
-        <div class="metric"><strong>1</strong><span>shared JSON analytical model</span></div>
-        <div class="metric"><strong>Revit + Rhino</strong><span>BIM hosts: Revit 2020&ndash;2026, Rhino 8/9</span></div>
-        <div class="metric"><strong>LGPL-3.0</strong><span>open-source core and modules</span></div>
-        <div class="metric"><strong>2021&rarr;</strong><span>peer-reviewed research lineage</span></div>
+    <!-- ============ 1 - HERO: what SAM is ============ -->
+    <section id="top" class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-title">
+            <span class="kicker">Open-source computational engineering</span>
+            <h1>From BIM geometry to auditable engineering workflows</h1>
+          </div>
+          <div class="hero-copy">
+            <p class="lead">SAM is an open-source computational-engineering platform built around a shared analytical building model. It connects BIM, building physics, HVAC systems and simulation through reusable, traceable workflows.</p>
+            <div class="cta">
+              <a class="btn primary" href="#platform">Explore the platform</a>
+              <a class="btn" href="https://github.com/SAM-BIM/SAM" target="_blank" rel="noopener noreferrer">SAM on GitHub</a>
+              <a class="btn quiet arrow-r" href="https://github.com/SAM-BIM/SAM_Deploy/releases/latest" target="_blank" rel="noopener noreferrer">Get SAM </a>
+            </div>
+          </div>
+        </div>
+        <!-- EVIDENCE E01 (hero) - real SAM Analytical capture; provenance in assets/evidence/README.md -->
+        <figure class="shot hero-media">
+          <div class="frame">
+            <img src="assets/evidence/E01_SAM_PartF_Design_Airflow_Overlay.png" width="1604" height="568" fetchpriority="high"
+                 alt="SAM analytical model plan view with ventilation requirement and design airflow values for dwelling spaces." />
+          </div>
+          <figcaption>
+            <span class="eid">E01</span>
+            <span>The SAM analytical model in the SAM Analytical desktop app: engineering data reviewed directly on the model, here ventilation requirements beside design airflows. <span class="legend"><b class="f">F</b>&nbsp;Part F requirement <b class="d">D</b>&nbsp;design airflow</span> <a class="full" href="assets/evidence/E01_SAM_PartF_Design_Airflow_Overlay.png">Full size</a></span>
+          </figcaption>
+        </figure>
       </div>
     </section>
 
-    <section id="workflow" class="band soft">
-      <span class="kicker">Workflow</span>
-      <h2>How SAM Works</h2>
-      <p class="lead">Project inputs become one SAM analytical model, then move through validation, attribution, simulation, and HVAC comparison in a repeatable workflow.</p>
-      <div class="workflow">
-        <div class="step">
-          <span class="num">01</span>
-          <strong>Inputs</strong>
-          <span>Revit, Rhino, Grasshopper, IFC, gbXML, and project geometry.</span>
+    <!-- ============ 2 - PLATFORM: architecture + why it is different ============ -->
+    <section id="platform" class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="kicker">Platform</span>
+          <h2>One analytical model at the centre</h2>
+          <p class="lead">Design tools feed a shared analytical building model. Engineering logic, systems and simulation all work on that model, and their results return to it.</p>
         </div>
-        <div class="connector" aria-hidden="true">-&gt;</div>
-        <div class="step">
-          <span class="num">02</span>
-          <strong>SAM Analytical Model</strong>
-          <span>Panels, spaces, apertures, adjacency clusters, location, profiles, and libraries.</span>
-        </div>
-        <div class="connector" aria-hidden="true">-&gt;</div>
-        <div class="step">
-          <span class="num">03</span>
-          <strong>Validation + Attribution</strong>
-          <span>Watertight shells, cleaned geometry, constructions, loads, schedules, and system intent.</span>
-        </div>
-        <div class="connector" aria-hidden="true">-&gt;</div>
-        <div class="step">
-          <span class="num">04</span>
-          <strong>Simulation + Results</strong>
-          <span>Tas dynamic simulation, HVAC scenarios, result extraction, and post-processing.</span>
+
+        <div class="platform">
+          <!-- ARCHITECTURE SLOT D1: replace this CSS architecture with the D1 platform diagram when it exists. -->
+          <div>
+            <div class="arch">
+              <div class="tier">
+                <h3>Hosts &amp; exchange</h3>
+                <div class="chips"><span class="chip">Revit</span><span class="chip">Rhino</span><span class="chip">Grasshopper</span><span class="chip">IFC</span><span class="chip">gbXML</span><span class="chip">Ladybug Tools</span><span class="chip">BHoM</span></div>
+              </div>
+              <div class="down" aria-hidden="true"></div>
+              <div class="tier core">
+                <h3>Shared core</h3>
+                <p><span class="core-title">SAM analytical model</span>Spaces, panels, apertures, adjacency, constructions, profiles, internal conditions, systems and results &mdash; one open JSON model, reused rather than rebuilt.</p>
+              </div>
+              <div class="down" aria-hidden="true"></div>
+              <div class="tier">
+                <h3>Engineering &amp; systems</h3>
+                <div class="chips"><span class="chip">Geometry processing</span><span class="chip">Loads</span><span class="chip">Ventilation</span><span class="chip">Overheating</span><span class="chip">HVAC systems</span><span class="chip">Psychrometrics</span></div>
+              </div>
+              <div class="down" aria-hidden="true"></div>
+              <div class="tier">
+                <h3>Simulation adapters</h3>
+                <div class="chips"><span class="chip">Tas</span><span class="chip">OpenStudio <span class="status dev">In development</span></span></div>
+              </div>
+              <div class="down" aria-hidden="true"></div>
+              <div class="tier">
+                <h3>Results, review &amp; data</h3>
+                <div class="chips"><span class="chip">Results on the model</span><span class="chip">Plan overlays</span><span class="chip">Assessments</span><span class="chip">Reports</span><span class="chip">Excel &amp; SQLite</span></div>
+              </div>
+            </div>
+            <p class="note mt-16">Grasshopper is one host for SAM, not SAM itself. Tas is one simulation integration, not SAM itself.</p>
+          </div>
+
+          <div>
+            <p class="aside-title">What makes it different</p>
+            <ul class="principles">
+              <li><strong>One model, many workflows</strong><span>Geometry, constructions, systems and results live in one analytical model that every workflow reads and extends.</span></li>
+              <li><strong>Explicit engineering data</strong><span>Spaces, adjacency, systems and their relationships are named, inspectable objects &mdash; not hidden tool state.</span></li>
+              <li><strong>Deterministic and auditable</strong><span>Workflows are repeatable and record what they used, so results can be reviewed and reproduced.</span></li>
+              <li><strong>BIM and simulation connected</strong><span>Authoring tools and simulation engines are adapters around the model, not separate islands of data.</span></li>
+              <li><strong>Decisions keep their authority</strong><span>Regulatory requirements, engineering design and equipment capability stay distinct. <a href="#principle">See the principle</a></span></li>
+              <li><strong>Open, scriptable, extensible</strong><span>LGPL-licensed .NET code, scriptable from Grasshopper and C#, extended through independent modules.</span></li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="capabilities" class="band">
-      <span class="kicker">Capabilities</span>
-      <h2>Capabilities Today</h2>
-      <p class="lead">Every capability links to the public repository that implements it. Status chips distinguish what is shipped from what is in active development &mdash; nothing in development is presented as finished.</p>
-      <p>
-        <span class="tag shipped">Shipped</span>
-        <span class="tag dev">In development</span>
-        <span class="tag future">Roadmap</span>
-      </p>
+    <!-- ============ 3 - CAPABILITIES: a broad map of SAM ============ -->
+    <section id="capabilities" class="section soft">
+      <div class="container">
+        <div class="section-head">
+          <span class="kicker">Capabilities</span>
+          <h2>What SAM does</h2>
+          <p class="lead">Six capability families, each built on the same analytical model and implemented in public repositories.</p>
+        </div>
 
-      <h3>Shipped and in daily use</h3>
-      <div class="grid cols-3">
-        <article class="card">
-          <h3>BIM hosts: Revit &amp; Rhino</h3>
-          <p>Analytical-model generation in Revit 2020&ndash;2026 (SAM add-in and Rhino.Inside.Revit) and in Rhino 8/9 with a large Grasshopper component library. <a href="https://github.com/SAM-BIM/SAM_Revit" target="_blank" rel="noopener noreferrer">SAM_Revit</a> &middot; <a href="https://github.com/SAM-BIM/SAM_Rhino_UI" target="_blank" rel="noopener noreferrer">SAM_Rhino_UI</a></p>
-          <span class="tag shipped">Shipped</span>
-        </article>
-        <article class="card">
-          <h3>Tas simulation &amp; HVAC scenarios</h3>
-          <p>Primary engine pathway: Tas TBD/TSD/T3D/TPD model exchange, overheating and compliance-oriented workflows (TM52, TM59, Part L), and reusable plant-room (EnergyCentre) templates for automated HVAC scenario comparison. <a href="https://github.com/SAM-BIM/SAM_Tas" target="_blank" rel="noopener noreferrer">SAM_Tas</a> &middot; <a href="https://github.com/SAM-BIM/SAM_Systems" target="_blank" rel="noopener noreferrer">SAM_Systems</a></p>
-          <span class="tag shipped">Shipped</span>
-        </article>
-        <article class="card">
-          <h3>Psychrometrics &amp; Mollier HVAC design</h3>
-          <p>Moist-air calculations, Mollier chart plotting, air-process loads, and concept-stage HVAC exploration &mdash; numerically validated against published reference data (ASHRAE, PsychroLib, IAPWS). <a href="https://github.com/SAM-BIM/SAM_Mollier" target="_blank" rel="noopener noreferrer">SAM_Mollier</a> &middot; <a href="https://github.com/SAM-BIM/SAM_Validation" target="_blank" rel="noopener noreferrer">SAM_Validation</a></p>
-          <span class="tag shipped">Shipped</span>
-        </article>
-        <article class="card">
-          <h3>Model exchange</h3>
-          <p>IFC, gbXML, IES VE GEM, BHoM, and Excel import/export, plus bidirectional Honeybee schema 2.6 round-trip exchange for Ladybug Tools workflows. <a href="https://github.com/SAM-BIM/SAM_IFC" target="_blank" rel="noopener noreferrer">SAM_IFC</a> &middot; <a href="https://github.com/SAM-BIM/SAM_gbXML" target="_blank" rel="noopener noreferrer">SAM_gbXML</a> &middot; <a href="https://github.com/SAM-BIM/SAM_LadybugTools" target="_blank" rel="noopener noreferrer">SAM_LadybugTools</a></p>
-          <span class="tag shipped">Shipped</span>
-        </article>
-        <article class="card">
-          <h3>Desktop applications</h3>
-          <p>Four Windows desktop apps &mdash; SAM Analytical, SAM Analytical Mollier, SAM Geometry, and SAM Weather &mdash; for model inspection, psychrometric design, geometry work, and weather data. <a href="https://github.com/SAM-BIM/SAM_UI" target="_blank" rel="noopener noreferrer">SAM_UI</a></p>
-          <span class="tag shipped">Shipped</span>
-        </article>
-        <article class="card">
-          <h3>One analytical model core</h3>
-          <p>Panels, spaces, apertures, adjacency clusters, profiles, materials, internal conditions, and systems in a single JSON model, scriptable from Grasshopper. <a href="https://github.com/SAM-BIM/SAM" target="_blank" rel="noopener noreferrer">SAM</a></p>
-          <span class="tag shipped">Shipped</span>
-        </article>
-      </div>
-
-      <h3 class="mt-22">In active development (2026)</h3>
-      <div class="grid cols-2">
-        <article class="card">
-          <h3>SAM_OCCT &mdash; native watertight geometry</h3>
-          <p>An Open Cascade geometry kernel inside SAM: sewing and healing of open shells into watertight solids, booleans, STEP/IGES exchange, cell complexes, and a 3D solver &mdash; with tests and CI, not yet wired into the SAM core model. <a href="https://github.com/SAM-BIM/SAM_OCCT" target="_blank" rel="noopener noreferrer">SAM_OCCT</a></p>
-          <span class="tag dev">In development</span>
-        </article>
-        <article class="card">
-          <h3>Native OpenStudio conversion</h3>
-          <p>Direct SAM-to-OpenStudio model generation: geometry, constructions, schedules, and thermostats with ideal-air loads (airside and plant HVAC not yet covered). OpenStudio remains a secondary, EnergyPlus-oriented pathway alongside Tas. <a href="https://github.com/SAM-BIM/SAM_OpenStudio" target="_blank" rel="noopener noreferrer">SAM_OpenStudio</a></p>
-          <span class="tag dev">In development</span>
-        </article>
-        <article class="card">
-          <h3>SharpDX 3D viewport</h3>
-          <p>A new GPU-accelerated viewport for the desktop apps, replacing HelixToolkit, with undo/redo support across the interface. <a href="https://github.com/SAM-BIM/SAM_UI" target="_blank" rel="noopener noreferrer">SAM_UI</a></p>
-          <span class="tag dev">In development</span>
-        </article>
-        <article class="card">
-          <h3>Systems &harr; Mollier plant-room bridge</h3>
-          <p>Connecting SAM_Systems plant-room schematics with Mollier psychrometric processes for air-handling and plant design workflows. <a href="https://github.com/SAM-BIM/SAM_Systems" target="_blank" rel="noopener noreferrer">SAM_Systems</a></p>
-          <span class="tag dev">In development</span>
-        </article>
-      </div>
-      <p class="note mt-14">SAM supports engineering workflows that contribute to assessment methods. Compliance still depends on the complete project methodology and toolchain.</p>
-    </section>
-
-    <section id="roadmap" class="band soft">
-      <span class="kicker">Roadmap</span>
-      <h2>Research-Backed Maturity</h2>
-      <p class="lead">Platform stages follow the published research line. SAM 4.0 and 5.0 are future directions; SAM_Mollier develops in parallel as a module, not a platform version.</p>
-      <div class="timeline">
-        <div class="milestone">
-          <strong>SAM 1.0</strong>
-          <p>Geometry creation, multi-method model generation, adjacency clusters, shell creation, and watertight boundary preparation. <span class="tag shipped">Shipped</span></p>
+        <div class="families">
+          <article class="family">
+            <h3>Analytical modelling</h3>
+            <p>Spaces, panels, apertures, adjacency, materials, constructions, profiles, internal conditions, systems and results in one model &mdash; inspected and edited in the SAM desktop apps.</p>
+            <!-- EVIDENCE SLOT E06: assets/evidence/E06_SAM_Analytical_Model_Context.png -->
+            <ul class="mods">
+              <li><a href="https://github.com/SAM-BIM/SAM" target="_blank" rel="noopener noreferrer">SAM</a></li>
+              <li><a href="https://github.com/SAM-BIM/SAM_UI" target="_blank" rel="noopener noreferrer">SAM_UI</a></li>
+            </ul>
+          </article>
+          <article class="family">
+            <h3>BIM &amp; geometry interoperability</h3>
+            <p>Analytical models from Revit 2025&ndash;2027 and Rhino 8/9, with IFC, gbXML, IES VE GEM, BHoM and Ladybug Tools exchange. A watertight Open Cascade geometry kernel is in development.</p>
+            <!-- EVIDENCE SLOT E09: assets/evidence/E09_SAM_Revit_Integration.png -->
+            <ul class="mods">
+              <li><a href="https://github.com/SAM-BIM/SAM_Revit" target="_blank" rel="noopener noreferrer">SAM_Revit</a></li>
+              <li><a href="https://github.com/SAM-BIM/SAM_Rhino_UI" target="_blank" rel="noopener noreferrer">SAM_Rhino_UI</a></li>
+              <li><a href="https://github.com/SAM-BIM/SAM_IFC" target="_blank" rel="noopener noreferrer">SAM_IFC</a></li>
+              <li><a href="https://github.com/SAM-BIM/SAM_gbXML" target="_blank" rel="noopener noreferrer">SAM_gbXML</a></li>
+              <li><a href="https://github.com/SAM-BIM/SAM_LadybugTools" target="_blank" rel="noopener noreferrer">SAM_LadybugTools</a></li>
+              <li><a href="https://github.com/SAM-BIM/SAM_OCCT" target="_blank" rel="noopener noreferrer">SAM_OCCT</a></li>
+            </ul>
+          </article>
+          <article class="family">
+            <h3>Building performance</h3>
+            <p>Loads, ventilation, overheating and thermal-simulation workflows on the model, including Part F ventilation traced to Approved Document F and Part O overheating assessed with CIBSE TM59.</p>
+            <ul class="mods">
+              <li><a href="https://github.com/SAM-BIM/SAM" target="_blank" rel="noopener noreferrer">SAM</a></li>
+              <li><a href="https://github.com/SAM-BIM/SAM_SolarCalculator" target="_blank" rel="noopener noreferrer">SAM_SolarCalculator</a></li>
+            </ul>
+          </article>
+          <article class="family">
+            <h3>HVAC &amp; systems</h3>
+            <p>Building systems as explicit engineering networks: plant rooms, air handling and ventilation, catalogue equipment selection, and psychrometric air processes on the Mollier chart.</p>
+            <!-- EVIDENCE SLOT E05: assets/evidence/E05_SAM_PartO_Iteration2B_Optimisation.png -->
+            <!-- EVIDENCE SLOT E07: assets/evidence/E07_SAM_AHU_Mollier.png -->
+            <ul class="mods">
+              <li><a href="https://github.com/SAM-BIM/SAM_Systems" target="_blank" rel="noopener noreferrer">SAM_Systems</a></li>
+              <li><a href="https://github.com/SAM-BIM/SAM_Mollier" target="_blank" rel="noopener noreferrer">SAM_Mollier</a></li>
+              <li><a href="https://github.com/SAM-BIM/SAM_Psychrometrics" target="_blank" rel="noopener noreferrer">SAM_Psychrometrics</a></li>
+            </ul>
+          </article>
+          <article class="family">
+            <h3>Simulation interoperability</h3>
+            <p>Tas integration for zone and systems simulation, with results read back onto the analytical model. Native OpenStudio conversion is in development.</p>
+            <ul class="mods">
+              <li><a href="https://github.com/SAM-BIM/SAM_Tas" target="_blank" rel="noopener noreferrer">SAM_Tas</a></li>
+              <li><a href="https://github.com/SAM-BIM/SAM_OpenStudio" target="_blank" rel="noopener noreferrer">SAM_OpenStudio</a></li>
+            </ul>
+          </article>
+          <article class="family">
+            <h3>Automation &amp; computational engineering</h3>
+            <p>Repeatable, scriptable workflows: a large Grasshopper component library, .NET APIs, scenarios run in series or in parallel, and data exchange for large models.</p>
+            <ul class="mods">
+              <li><a href="https://github.com/SAM-BIM/SAM_Multitasker" target="_blank" rel="noopener noreferrer">SAM_Multitasker</a></li>
+              <li><a href="https://github.com/SAM-BIM/SAM_Excel" target="_blank" rel="noopener noreferrer">SAM_Excel</a></li>
+              <li><a href="https://github.com/SAM-BIM/SAM_SQLite" target="_blank" rel="noopener noreferrer">SAM_SQLite</a></li>
+            </ul>
+          </article>
         </div>
-        <div class="milestone">
-          <strong>SAM 2.0</strong>
-          <p>Loads, attribution, material/profile/internal-condition libraries, dynamic simulation connectors, and BIM-to-BEM research validation. <span class="tag shipped">Shipped</span></p>
-        </div>
-        <div class="milestone">
-          <strong>SAM 3.0</strong>
-          <p>Reusable HVAC system generation, JSON system references, Tas EnergyCentre templates, automated scenario execution, and result extraction. <span class="tag shipped">Shipped</span></p>
-        </div>
-        <div class="milestone">
-          <strong>SAM_Mollier <span class="tag">Parallel module</span></strong>
-          <p>Psychrometric points, Mollier and psychrometric charts, air processes, HVAC loads, and concept-stage system exploration.</p>
-        </div>
-        <div class="milestone">
-          <strong>SAM 4.0</strong>
-          <p>Controls and control-strategy testing for HVAC system operation and scenario analysis. <span class="tag future">Roadmap</span></p>
-        </div>
-        <div class="milestone">
-          <strong>SAM 5.0</strong>
-          <p>Digital twin direction: an updatable building representation with geometry, systems, assumptions, results, and project data. <span class="tag future">Roadmap</span></p>
-        </div>
+        <p class="note mt-16">More modules, including the installer and release pipeline, are in the <a href="https://github.com/SAM-BIM" target="_blank" rel="noopener noreferrer">SAM-BIM organisation</a>.</p>
       </div>
     </section>
 
-    <section id="modules" class="band">
-      <span class="kicker">Ecosystem</span>
-      <h2>SAM Ecosystem</h2>
-      <p class="lead">Public repositories, grouped by their role in the analytical workflow. Modules that are currently private return here once they are public.</p>
-
-      <div class="module-group">
-        <h3>Core model</h3>
-        <div class="repo-list">
-          <div class="repo"><a href="https://github.com/SAM-BIM/SAM" target="_blank" rel="noopener noreferrer">SAM</a><span>Core analytical model objects and workflows.</span></div>
-          <div class="repo"><a href="https://github.com/SAM-BIM/SAM_Validation" target="_blank" rel="noopener noreferrer">SAM_Validation</a><span>Numerical validation against published reference data (ASHRAE, PsychroLib, IAPWS).</span></div>
+    <!-- ============ 4 - FLAGSHIP WORKFLOW: one example of SAM in practice ============ -->
+    <section id="workflow" class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="kicker">Flagship workflow</span>
+          <h2>One example of SAM in practice: Part F to Part O</h2>
+          <p class="lead">A three-dwelling model taken from ventilation requirement to overheating result. The analytical model, engineering logic, equipment data and simulation work together; each image is a real SAM screen.</p>
+          <ol class="chain">
+            <li>Analytical model</li>
+            <li>Regulatory requirement</li>
+            <li>Engineering design</li>
+            <li>Equipment decision</li>
+            <li>Simulation</li>
+            <li>Engineering result</li>
+          </ol>
         </div>
-      </div>
 
-      <div class="module-group">
-        <h3>Geometry and solvers</h3>
-        <div class="repo-list">
-          <div class="repo"><a href="https://github.com/SAM-BIM/SAM_OCCT" target="_blank" rel="noopener noreferrer">SAM_OCCT</a><span>Native Open Cascade geometry: watertight sew-and-heal, booleans, STEP/IGES, 3D solver. <span class="tag dev">In development</span></span></div>
-          <div class="repo"><a href="https://github.com/SAM-BIM/SAM_Topologic" target="_blank" rel="noopener noreferrer">SAM_Topologic</a><span>Topological space and building representations.</span></div>
-        </div>
-      </div>
+        <ol class="flow">
+          <li class="step">
+            <div class="step-head">
+              <div>
+                <span class="step-no"><b>01</b> Regulatory requirement</span>
+                <h3>Part F calculates what must be achieved.</h3>
+              </div>
+              <div>
+                <p>SAM derives the Approved Document F airflow for each room from the model and shows it on the plan beside the design.</p>
+                <span class="authority">Authority: <b>Regulation</b></span>
+              </div>
+            </div>
+            <!-- EVIDENCE E01 (detail crop of the same capture session) -->
+            <figure class="shot w-1095">
+              <div class="frame">
+                <img src="assets/evidence/E01_SAM_PartF_Design_Airflow_Overlay_Detail.png" width="1095" height="532" loading="lazy"
+                     alt="One dwelling in the SAM plan view: Part F required airflow tags beside higher design airflow tags for bedroom supply, kitchen extract and transfer." />
+              </div>
+              <figcaption><span class="eid">E01</span><span>Bedroom supply: Part F requires 63&nbsp;l/s; the design holds 143&nbsp;l/s. Two quantities on one plan.</span></figcaption>
+            </figure>
+          </li>
 
-      <div class="module-group">
-        <h3>BIM and exchange</h3>
-        <div class="repo-list">
-          <div class="repo"><a href="https://github.com/SAM-BIM/SAM_Revit" target="_blank" rel="noopener noreferrer">SAM_Revit</a><span>Revit and Rhino.Inside workflows (Revit 2020&ndash;2026).</span></div>
-          <div class="repo"><a href="https://github.com/SAM-BIM/SAM_IFC" target="_blank" rel="noopener noreferrer">SAM_IFC</a><span>Industry Foundation Classes exchange.</span></div>
-          <div class="repo"><a href="https://github.com/SAM-BIM/SAM_gbXML" target="_blank" rel="noopener noreferrer">SAM_gbXML</a><span>gbXML import, export, and model transfer.</span></div>
-          <div class="repo"><a href="https://github.com/SAM-BIM/SAM_GEM" target="_blank" rel="noopener noreferrer">SAM_GEM</a><span>IES VE GEM export workflows.</span></div>
-          <div class="repo"><a href="https://github.com/SAM-BIM/SAM_BHoM" target="_blank" rel="noopener noreferrer">SAM_BHoM</a><span>BHoM object model interoperability.</span></div>
-        </div>
-      </div>
+          <li class="step">
+            <div class="step-head">
+              <div>
+                <span class="step-no"><b>02</b> Engineering design</span>
+                <h3>The engineer sets the design intent.</h3>
+              </div>
+              <div>
+                <p>Calculation proposes; the engineer reviews. Here design airflow is raised above the requirement to address overheating, while the requirement and the unit&rsquo;s capacity stay unchanged.</p>
+                <span class="authority">Authority: <b>Engineer</b></span>
+              </div>
+            </div>
+            <!-- EVIDENCE E02 -->
+            <figure class="shot w-1116">
+              <div class="frame">
+                <img src="assets/evidence/E02_SAM_PartO_Review_Iteration_Authority.png" width="1116" height="368" loading="lazy"
+                     alt="SAM Part O review showing separate required airflow, design airflow and selected ventilation-unit capacity." />
+              </div>
+              <figcaption><span class="eid">E02</span><span>The regulatory requirement, engineering design and selected equipment capacity remain separate decisions.</span></figcaption>
+            </figure>
+          </li>
 
-      <div class="module-group">
-        <h3>Simulation and HVAC</h3>
-        <div class="repo-list">
-          <div class="repo"><a href="https://github.com/SAM-BIM/SAM_Tas" target="_blank" rel="noopener noreferrer">SAM_Tas</a><span>Primary Tas EDSL simulation integration: TBD/TSD/T3D/TPD, TM52/TM59/Part L, plant-room templates.</span></div>
-          <div class="repo"><a href="https://github.com/SAM-BIM/SAM_OpenStudio" target="_blank" rel="noopener noreferrer">SAM_OpenStudio</a><span>Secondary OpenStudio model generation and exchange; native conversion in development.</span></div>
-          <div class="repo"><a href="https://github.com/SAM-BIM/SAM_LadybugTools" target="_blank" rel="noopener noreferrer">SAM_LadybugTools</a><span>Honeybee schema round-trip and Ladybug Tools interoperability.</span></div>
-          <div class="repo"><a href="https://github.com/SAM-BIM/SAM_Systems" target="_blank" rel="noopener noreferrer">SAM_Systems</a><span>Building systems, plant rooms, and HVAC system concepts.</span></div>
-          <div class="repo"><a href="https://github.com/SAM-BIM/SAM_Multitasker" target="_blank" rel="noopener noreferrer">SAM_Multitasker</a><span>Scenario orchestration and task execution.</span></div>
-        </div>
-      </div>
+          <li class="step">
+            <div class="step-head">
+              <div>
+                <span class="step-no"><b>03</b> Equipment decision</span>
+                <h3>SAM selects equipment and prepares the scenario.</h3>
+              </div>
+              <div>
+                <p>Each dwelling gets the smallest catalogue unit that meets its design duty; the unit&rsquo;s maximum is a ceiling, never a design value. SAM then builds a repeatable simulation scenario and records its state.</p>
+                <span class="authority">Authority: <b>Product</b></span>
+              </div>
+            </div>
+            <!-- EVIDENCE E03 -->
+            <figure class="shot">
+              <div class="frame">
+                <img src="assets/evidence/E03_SAM_PartO_Prepare_Run_Status.png" width="1345" height="904" loading="lazy"
+                     alt="SAM Part O Prepare and Run interface showing a prepared ventilation scenario and simulation status." />
+              </div>
+              <figcaption><span class="eid">E03</span><span>SAM materialises the engineering design into a deterministic simulation scenario and records the run state. <a class="full" href="assets/evidence/E03_SAM_PartO_Prepare_Run_Status.png">Full size</a></span></figcaption>
+            </figure>
+          </li>
 
-      <div class="module-group">
-        <h3>Engineering physics</h3>
-        <div class="repo-list">
-          <div class="repo"><a href="https://github.com/SAM-BIM/SAM_Mollier" target="_blank" rel="noopener noreferrer">SAM_Mollier</a><span>Mollier charts and psychrometric HVAC processes.</span></div>
-          <div class="repo"><a href="https://github.com/SAM-BIM/SAM_Psychrometrics" target="_blank" rel="noopener noreferrer">SAM_Psychrometrics</a><span>Moist-air thermodynamic property calculations.</span></div>
-          <div class="repo"><a href="https://github.com/SAM-BIM/SAM_SolarCalculator" target="_blank" rel="noopener noreferrer">SAM_SolarCalculator</a><span>Solar position and irradiance utilities.</span></div>
-          <div class="repo"><a href="https://github.com/SAM-BIM/SAM_IAPWS" target="_blank" rel="noopener noreferrer">SAM_IAPWS</a><span>Water and steam properties using IAPWS-IF97.</span></div>
-        </div>
-      </div>
-
-      <div class="module-group">
-        <h3>User layers and scripting</h3>
-        <div class="repo-list">
-          <div class="repo"><a href="https://github.com/SAM-BIM/SAM_UI" target="_blank" rel="noopener noreferrer">SAM_UI</a><span>Windows desktop apps: SAM Analytical, SAM Analytical Mollier, SAM Geometry, SAM Weather.</span></div>
-          <div class="repo"><a href="https://github.com/SAM-BIM/SAM_Rhino_UI" target="_blank" rel="noopener noreferrer">SAM_Rhino_UI</a><span>Rhino plugin and command-based access.</span></div>
-          <div class="repo"><a href="https://github.com/SAM-BIM/SAM_Revit_UI" target="_blank" rel="noopener noreferrer">SAM_Revit_UI</a><span>User-facing Revit add-in layer.</span></div>
-          <div class="repo"><a href="https://github.com/SAM-BIM/SAM_Excel" target="_blank" rel="noopener noreferrer">SAM_Excel</a><span>Spreadsheet exchange and post-processing.</span></div>
-          <div class="repo"><a href="https://github.com/SAM-BIM/SAM_Python" target="_blank" rel="noopener noreferrer">SAM_Python</a><span>Python scripting access (early experimental module).</span></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="start" class="grid cols-2">
-      <div class="band">
-        <span class="kicker">Get Started</span>
-        <h2>Install</h2>
-        <ol>
-          <li>Download the latest <a href="https://github.com/SAM-BIM/SAM_Deploy/releases/latest" target="_blank" rel="noopener noreferrer">SAM installer</a>.</li>
-          <li>Run the installer and follow the prompts.</li>
-          <li>Open SAM where you work: Grasshopper in Rhino, Rhino commands, the Revit add-in via Rhino.Inside.Revit, or one of the four desktop apps.</li>
-          <li>Build from source in Visual Studio when developing or extending modules.</li>
+          <li class="step">
+            <div class="step-head">
+              <div>
+                <span class="step-no"><b>04</b> Simulation &amp; result</span>
+                <h3>Tas simulates; SAM assesses the result.</h3>
+              </div>
+              <div>
+                <p>The building is simulated in Tas and each room assessed against CIBSE TM59. On 2050s design weather this case still fails in 6 of 8 rooms &mdash; and SAM says so.</p>
+                <span class="authority">Authority: <b>Simulation</b></span>
+              </div>
+            </div>
+            <!-- EVIDENCE E04 -->
+            <figure class="shot">
+              <div class="frame">
+                <img src="assets/evidence/E04_SAM_PartO_TM59_Result.png" width="1345" height="730" loading="lazy"
+                     alt="SAM TM59 result review showing room-level overheating assessment outcomes from a Tas simulation." />
+              </div>
+              <figcaption><span class="eid">E04</span><span>Example TM59 assessment showing the recorded room-level outcome; SAM reports the result rather than forcing a pass. <a class="full" href="assets/evidence/E04_SAM_PartO_TM59_Result.png">Full size</a></span></figcaption>
+            </figure>
+          </li>
         </ol>
-        <h3 class="mt-16">Requirements</h3>
-        <ul>
-          <li>Windows</li>
-          <li>Rhino 8 or 9 (for Rhino/Grasshopper workflows)</li>
-          <li>Revit 2020&ndash;2026 (for Revit add-in / Rhino.Inside.Revit workflows)</li>
-          <li>Tas EDSL (for simulation workflows)</li>
+
+        <div class="scope">
+          <p>On the 2026-Q3 release line, the same design can be simulated through inter-zone airflows or through explicit ventilation systems in Tas, including selected-product cooling, with the unchanged TM59 assessment. <a href="https://github.com/SAM-BIM/SAM/blob/sow/2026-Q3/documentation/PartO-TAS-VALIDATION.md" target="_blank" rel="noopener noreferrer">Technical record</a></p>
+          <p class="muted">SAM supports engineering workflows that contribute to assessment methods; compliance depends on the complete project methodology. A TM59 pass is an overheating result, not a Part O compliance certificate.</p>
+        </div>
+
+        <!-- VIDEO SLOT V1: ~3-minute flagship workflow video. Insert an embedded player here when V1 exists. -->
+
+        <div id="principle" class="quantities">
+          <span class="kicker">Engineering principle</span>
+          <h2>Different engineering concepts stay different objects</h2>
+          <p class="lead">A requirement is not a design, and a design is not what equipment can deliver. SAM keeps each quantity as its own object with its own authority, so one value never silently becomes another. The flagship workflow shows it with airflow:</p>
+          <div class="qgrid">
+            <div class="q">
+              <span class="qn">01</span>
+              <h3>Required</h3>
+              <p>The minimum the regulation demands.</p>
+              <span class="by">Authority: Regulation</span>
+            </div>
+            <div class="q">
+              <span class="qn">02</span>
+              <h3>Design</h3>
+              <p>What the engineer decides to ventilate at.</p>
+              <span class="by">Authority: Engineer</span>
+            </div>
+            <div class="q">
+              <span class="qn">03</span>
+              <h3>Selected capacity</h3>
+              <p>What the selected unit can deliver &mdash; a ceiling, not a target.</p>
+              <span class="by">Authority: Product</span>
+            </div>
+            <div class="q">
+              <span class="qn">04</span>
+              <h3>Operating</h3>
+              <p>What flows in the simulated or commissioned system.</p>
+              <span class="by">Authority: Operation</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 5 - EVIDENCE ============ -->
+    <section id="evidence" class="section soft">
+      <div class="container">
+        <div class="section-head">
+          <span class="kicker">Evidence</span>
+          <h2>Evidence, not claims</h2>
+          <p class="lead">Each statement links to the public record behind it.</p>
+        </div>
+        <div class="proof">
+          <article class="proof-item">
+            <h3>Automated testing</h3>
+            <p>Model, desktop-app, HVAC-systems and simulation regression suites run at each merged milestone.</p>
+            <a class="link arrow-r" href="https://github.com/SAM-BIM/SAM/blob/sow/2026-Q3/PROJECT_PROGRESS.md" target="_blank" rel="noopener noreferrer">Progress record </a>
+          </article>
+          <article class="proof-item">
+            <h3>Release acceptance</h3>
+            <p>Installers checked on real Rhino 8/9 and Revit 2025&ndash;2027 hosts against a documented acceptance matrix.</p>
+            <!-- EVIDENCE SLOT E08: assets/evidence/E08_SAM_Release_Validation_H1_H12.png -->
+            <a class="link arrow-r" href="https://github.com/SAM-BIM/SAM_Deploy/blob/sow/2026-Q3/RELEASE_VALIDATION.md" target="_blank" rel="noopener noreferrer">Acceptance record </a>
+          </article>
+          <article class="proof-item">
+            <h3>Simulation cross-checks</h3>
+            <p>SAM&rsquo;s TM59 figures checked against Tas&rsquo;s own overheating report, with limitations stated.</p>
+            <a class="link arrow-r" href="https://github.com/SAM-BIM/SAM/blob/sow/2026-Q3/documentation/PartO-TAS-VALIDATION.md" target="_blank" rel="noopener noreferrer">Validation record </a>
+          </article>
+          <article class="proof-item">
+            <h3>Regulatory traceability</h3>
+            <p>Approved Document F traced paragraph by paragraph &mdash; an assessment, not a certification.</p>
+            <a class="link arrow-r" href="https://github.com/SAM-BIM/SAM/blob/sow/2026-Q3/documentation/PartF-ADF-Volume1-2021-Traceability.md" target="_blank" rel="noopener noreferrer">Traceability matrix </a>
+          </article>
+          <article class="proof-item">
+            <h3>Peer-reviewed research</h3>
+            <p>Published at building-simulation venues since 2021, including Springer and BSA proceedings.</p>
+            <a class="link arrow-r" href="#research">Publications </a>
+          </article>
+          <article class="proof-item">
+            <h3>Installable releases</h3>
+            <p>Versioned Windows installer with release notes for Rhino, Revit and the SAM desktop apps.</p>
+            <a class="link arrow-r" href="https://github.com/SAM-BIM/SAM_Deploy/releases/latest" target="_blank" rel="noopener noreferrer">Latest release </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 6 - RESEARCH / PEOPLE / CONTACT ============ -->
+    <section id="research" class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="kicker">Research</span>
+          <h2>Research &amp; publications</h2>
+          <p class="lead">Developed in the open; published at peer-reviewed building-simulation venues &mdash; from BIM-to-BEM model generation to psychrometrics and automated HVAC simulation.</p>
+        </div>
+
+        <ul class="pubs">
+          <li>
+            <span class="venue">BSA 2026</span>
+            <div>
+              <h3>Sustainable Analytical Model (SAM 3.0): A New Approach to Automated HVAC Simulation</h3>
+              <p>M. Dengusiak, J. Ziolkowski, M. Dengusiak. Presented at BSA 2026, Bozen-Bolzano, June 2026; proceedings forthcoming.</p>
+            </div>
+          </li>
+          <li>
+            <span class="venue">CESBP 2025</span>
+            <div>
+              <h3><a href="https://doi.org/10.1007/978-3-032-14011-1_75" target="_blank" rel="noopener noreferrer">Bridging BIM and BEM: Efficient Generation of Building Energy Models Using the Sustainable Analytical Model (SAM)</a></h3>
+              <p>M. Dengusiak, J. Ziolkowski. Lecture Notes in Civil Engineering 795, Springer 2026.</p>
+            </div>
+          </li>
+          <li>
+            <span class="venue">CESBP 2025</span>
+            <div>
+              <h3><a href="https://doi.org/10.1007/978-3-032-14019-7_51" target="_blank" rel="noopener noreferrer">Introducing SAM_Mollier: An Open-Source Tool for Psychrometric HVAC Analysis</a></h3>
+              <p>M. Dengusiak, J. Ziolkowski. Lecture Notes in Civil Engineering 796, pp. 693&ndash;708, Springer 2026.</p>
+            </div>
+          </li>
+          <li>
+            <span class="venue">BSA 2024</span>
+            <div>
+              <h3><a href="https://doi.org/10.13124/9788860462022" target="_blank" rel="noopener noreferrer">Analytical Model (SAM 2.0): A New Frontier in Open-Source Building Energy Simulation</a></h3>
+              <p>M. Dengusiak, J. Ziolkowski, M. Dengusiak. Bozen-Bolzano University Press 2025.</p>
+            </div>
+          </li>
+          <li>
+            <span class="venue">ISHVAC 2021</span>
+            <div>
+              <h3><a href="https://www.researchgate.net/publication/354793510_SAM_-_An_Open-Source_Tool_to_Generate_Energy_Models" target="_blank" rel="noopener noreferrer">SAM - An Open-Source Tool to Generate Energy Models</a></h3>
+              <p>M. Dengusiak, J. Ziolkowski.</p>
+            </div>
+          </li>
         </ul>
-        <p class="note">Current installer releases are managed through the SAM_Deploy repository.</p>
+        <p class="note mt-16">Full list: <a href="https://www.researchgate.net/profile/Michal-Dengusiak/publications" target="_blank" rel="noopener noreferrer">ResearchGate &ndash; Michal Dengusiak</a>.</p>
+
+        <div id="contact" class="people mt-72">
+          <div>
+            <span class="kicker">People</span>
+            <h2>Who builds SAM</h2>
+            <p class="lead">An independent open-source project.</p>
+          </div>
+          <ul class="person-list">
+            <li>
+              <strong>Michal Dengusiak</strong>
+              <span class="role">Co-creator and engineering lead. Chartered Engineer; previously at Arup, Buro Happold and Hoare Lea. SAM-BIM is independent and not sponsored or endorsed by those organisations.</span>
+              <span class="links"><a href="https://www.linkedin.com/in/michal-dengusiak-a8028020/" target="_blank" rel="noopener noreferrer">LinkedIn</a> &middot; <a href="https://www.researchgate.net/profile/Michal-Dengusiak" target="_blank" rel="noopener noreferrer">ResearchGate</a></span>
+            </li>
+            <li>
+              <strong>Jakub Ziolkowski</strong>
+              <span class="role">Co-creator; core platform development.</span>
+              <span class="links"><a href="https://www.linkedin.com/in/jakubziolkowski/" target="_blank" rel="noopener noreferrer">LinkedIn</a> &middot; <a href="https://www.researchgate.net/profile/Jakub-Ziolkowski" target="_blank" rel="noopener noreferrer">ResearchGate</a></span>
+            </li>
+            <li>
+              <strong>Michalina Dengusiak</strong>
+              <span class="role">Co-author of the SAM 2.0 and SAM 3.0 papers.</span>
+              <span class="links"><a href="https://www.linkedin.com/in/michalina-dengusiak-809a97303/" target="_blank" rel="noopener noreferrer">LinkedIn</a> &middot; <a href="https://www.researchgate.net/profile/Michalina-Dengusiak" target="_blank" rel="noopener noreferrer">ResearchGate</a></span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="start">
+          <a class="tile" href="https://github.com/SAM-BIM/SAM_Deploy/releases/latest" target="_blank" rel="noopener noreferrer"><strong>Get SAM</strong><span>Windows installer for Rhino 8/9, Revit and the SAM desktop apps. Tas workflows need a Tas licence.</span></a>
+          <a class="tile" href="https://github.com/SAM-BIM/SAM/wiki" target="_blank" rel="noopener noreferrer"><strong>Read the docs</strong><span>Concepts, modules and build guidance.</span></a>
+          <a class="tile" href="https://github.com/SAM-BIM/SAM/discussions" target="_blank" rel="noopener noreferrer"><strong>Discussions</strong><span>Questions and discussion on GitHub.</span></a>
+        </div>
       </div>
-      <div class="band">
-        <span class="kicker">Typical Steps</span>
-        <h2>Run A Study</h2>
-        <ol>
-          <li>Import or generate geometry.</li>
-          <li>Create panels, spaces, apertures, and adjacency clusters.</li>
-          <li>Attribute constructions, profiles, internal conditions, and systems.</li>
-          <li>Validate the analytical model and export or simulate.</li>
-          <li>Compare scenarios, extract results, and document assumptions.</li>
-        </ol>
-      </div>
     </section>
 
-    <section id="research" class="band soft">
-      <span class="kicker">Research</span>
-      <h2>Research &amp; Publications</h2>
-      <p class="lead">SAM is developed in the open and published through peer-reviewed building-simulation venues. Publications are listed with DOI or proceedings links where available; author profiles on ResearchGate carry the full list.</p>
-      <p class="note">Numerical quality: psychrometric and steam-property calculations are tested against published reference data &mdash; ASHRAE Fundamentals tables, PsychroLib, and IAPWS-IF97 &mdash; in the public <a href="https://github.com/SAM-BIM/SAM_Validation" target="_blank" rel="noopener noreferrer">SAM_Validation</a> suite.</p>
-
-      <article class="publication">
-        <h3>Sustainable Analytical Model (SAM 3.0): A New Approach to Automated HVAC Simulation</h3>
-        <p class="muted">M. Dengusiak, J. Ziolkowski, M. Dengusiak. BSA 2026.</p>
-        <span class="tag">SAM 3.0</span><span class="tag">HVAC automation</span><span class="tag">Tas</span>
-        <p class="coming">Presented at BSA 2026 (Bozen-Bolzano, June 2026); proceedings forthcoming.</p>
-      </article>
-
-      <article class="publication">
-        <h3><a href="https://doi.org/10.1007/978-3-032-14011-1_75" target="_blank" rel="noopener noreferrer">Bridging BIM and BEM: Efficient Generation of Building Energy Models Using the Sustainable Analytical Model (SAM)</a></h3>
-        <p class="muted">M. Dengusiak, J. Ziolkowski. CESBP 2025, Lecture Notes in Civil Engineering 795, Springer 2026.</p>
-        <span class="tag">BIM to BEM</span><span class="tag">Revit</span><span class="tag">Watertight models</span>
-      </article>
-
-      <article class="publication">
-        <h3><a href="https://doi.org/10.1007/978-3-032-14019-7_51" target="_blank" rel="noopener noreferrer">Introducing SAM_Mollier: An Open-Source Tool for Psychrometric HVAC Analysis</a></h3>
-        <p class="muted">M. Dengusiak, J. Ziolkowski. CESBP 2025, Lecture Notes in Civil Engineering 796, pp. 693&ndash;708, Springer 2026.</p>
-        <span class="tag">SAM_Mollier</span><span class="tag">Psychrometrics</span><span class="tag">HVAC</span>
-      </article>
-
-      <article class="publication">
-        <h3><a href="https://doi.org/10.13124/9788860462022" target="_blank" rel="noopener noreferrer">Analytical Model (SAM 2.0): A New Frontier in Open-Source Building Energy Simulation</a></h3>
-        <p class="muted">M. Dengusiak, J. Ziolkowski, M. Dengusiak. BSA 2024, Bozen-Bolzano University Press 2025.</p>
-        <span class="tag">SAM 2.0</span><span class="tag">Simulation</span><span class="tag">Open source</span>
-      </article>
-
-      <article class="publication">
-        <h3><a href="https://www.researchgate.net/publication/354793510_SAM_-_An_Open-Source_Tool_to_Generate_Energy_Models" target="_blank" rel="noopener noreferrer">SAM - An Open-Source Tool to Generate Energy Models</a></h3>
-        <p class="muted">M. Dengusiak, J. Ziolkowski. ISHVAC 2021.</p>
-        <span class="tag">Energy models</span><span class="tag">Open source</span>
-      </article>
-
-      <article class="publication">
-        <h3><a href="https://www.researchgate.net/publication/381888126_Elevating_Engineering_The_Renaissance_of_Psychrometric_and_Mollier_Analysis" target="_blank" rel="noopener noreferrer">Elevating Engineering: The Renaissance of Psychrometric and Mollier Analysis</a></h3>
-        <p class="muted">Psychrometric and Mollier analysis publication.</p>
-        <span class="tag">Mollier</span><span class="tag">Psychrometric analysis</span>
-      </article>
-
-      <article class="publication">
-        <h3><a href="https://www.researchgate.net/publication/354793768_SAM_Single_Analysis_Model_-How_to_calculate_MEP_project_in_30_minutes" target="_blank" rel="noopener noreferrer">SAM Single Analysis Model - How to calculate MEP project in 30 minutes</a></h3>
-        <p class="muted">BILT Europe 2018 talk.</p>
-        <span class="tag">Talk</span><span class="tag">MEP workflow</span>
-      </article>
-
-      <p class="note mt-14">Full and up-to-date list: <a href="https://www.researchgate.net/profile/Michal-Dengusiak/publications" target="_blank" rel="noopener noreferrer">ResearchGate - Michal Dengusiak</a>.</p>
-    </section>
-
-    <section id="resources" class="band">
-      <span class="kicker">Docs And Community</span>
-      <h2>Documentation, Support, Contribution</h2>
-      <ul>
-        <li><a href="https://github.com/SAM-BIM/SAM/wiki" target="_blank" rel="noopener noreferrer">SAM Wiki</a> - concepts, tutorials, and build notes.</li>
-        <li><a href="https://github.com/SAM-BIM/SAM/discussions" target="_blank" rel="noopener noreferrer">GitHub Discussions</a> - questions, ideas, and feature proposals.</li>
-        <li><a href="https://github.com/SAM-BIM/SAM_Deploy/releases" target="_blank" rel="noopener noreferrer">Installer releases</a> - changelog and downloads.</li>
-        <li><a href="https://github.com/SAM-BIM/SAM" target="_blank" rel="noopener noreferrer">Contributing</a> - source code, issues, and pull requests.</li>
-      </ul>
-    </section>
-
-    <section id="team" class="band">
-      <span class="kicker">Team</span>
-      <h2>Meet The SAM-BIM Team</h2>
-      <p><strong>Company:</strong> <a href="https://www.linkedin.com/company/sambim" target="_blank" rel="noopener noreferrer">SAM-BIM on LinkedIn</a></p>
-      <ul>
-        <li><strong>Michal Dengusiak</strong> - <a href="https://www.linkedin.com/in/michal-dengusiak-a8028020/" target="_blank" rel="noopener noreferrer">LinkedIn</a> / <a href="https://www.researchgate.net/profile/Michal-Dengusiak" target="_blank" rel="noopener noreferrer">ResearchGate</a></li>
-        <li><strong>Jakub Ziolkowski</strong> - <a href="https://www.linkedin.com/in/jakubziolkowski/" target="_blank" rel="noopener noreferrer">LinkedIn</a> / <a href="https://www.researchgate.net/profile/Jakub-Ziolkowski" target="_blank" rel="noopener noreferrer">ResearchGate</a></li>
-        <li><strong>Michalina Dengusiak</strong> - <a href="https://www.linkedin.com/in/michalina-dengusiak-809a97303/" target="_blank" rel="noopener noreferrer">LinkedIn</a> / <a href="https://www.researchgate.net/profile/Michalina-Dengusiak" target="_blank" rel="noopener noreferrer">ResearchGate</a></li>
-      </ul>
-      <p class="note mt-10">Commercial services, training, and bespoke workflows are available through <a href="https://www.linkedin.com/company/sambim" target="_blank" rel="noopener noreferrer">SAM-BIM</a>.</p>
-    </section>
   </main>
 
   <footer>
     <div class="container">
       <div>&copy; <span id="year">2026</span> SAM (Sustainable Analytical Model). Code: <a href="https://www.gnu.org/licenses/lgpl-3.0.html" target="_blank" rel="noopener noreferrer">LGPL-3.0-or-later</a> &middot; Site content: <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC-BY-4.0</a>.</div>
+      <div><a href="https://github.com/SAM-BIM" target="_blank" rel="noopener noreferrer">GitHub</a> &middot; <a href="https://www.linkedin.com/company/sambim" target="_blank" rel="noopener noreferrer">LinkedIn</a></div>
     </div>
   </footer>
 

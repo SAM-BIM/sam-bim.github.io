@@ -1,6 +1,15 @@
 # sam-bim.github.io
 SAM-BIM official website
 
+## Evidence assets
+
+Screenshots and diagrams referenced by the homepage live in
+[`assets/evidence/`](assets/evidence/README.md). That manifest lists the exact
+filenames (E01–E09, V1, D1), their homepage slots and the drop-in procedure.
+E01–E04 are real SAM captures with their provenance recorded there; the
+remaining IDs are marked as comment slots in `index.html`. Never commit dummy,
+mocked-up or AI-generated imagery.
+
 ## License
 
 Site content (text and imagery) is licensed under [CC-BY-4.0](LICENSE). The SAM software it describes is licensed separately under LGPL-3.0-or-later — see [SAM-BIM/SAM](https://github.com/SAM-BIM/SAM).
