@@ -115,19 +115,19 @@
       <div class="grid cols-3 mt-16">
         <article class="card">
           <h3>Automated testing</h3>
-          <p>2,114 / 2,114 core analytical tests passing at the 2026-Q3 freeze, alongside UI (771), systems (90) and TM59 (91) suites. <a href="https://github.com/SAM-BIM/SAM/blob/sow/2026-Q3/PROJECT_PROGRESS.md" target="_blank" rel="noopener noreferrer">Recorded at the freeze</a>.</p>
+          <p>Core analytical-model, desktop UI, HVAC-systems and Tas/TM59 regression suites run in Release builds, with results and exact counts recorded at each merged milestone of the 2026-Q3 release line. <a href="https://github.com/SAM-BIM/SAM/blob/sow/2026-Q3/PROJECT_PROGRESS.md" target="_blank" rel="noopener noreferrer">Progress record</a>.</p>
         </article>
         <article class="card">
           <h3>Release acceptance</h3>
-          <p>Every release candidate passes a documented H1&ndash;H12 acceptance matrix &mdash; clean install, Rhino 8/9 and Revit 2025&ndash;2027 load tests, upgrade/uninstall symmetry, payload provenance. Latest run: 12 / 12 pass. <a href="https://github.com/SAM-BIM/SAM_Deploy/blob/sow/2026-Q3/RELEASE_VALIDATION.md" target="_blank" rel="noopener noreferrer">Acceptance record</a>.</p>
+          <p>Release candidates are checked against a documented twelve-point acceptance matrix (H1&ndash;H12): clean install, Rhino 8/9 and Revit 2025&ndash;2027 load tests, upgrade/uninstall behaviour and payload provenance. The 2026-Q3 hardening candidate passed 12 / 12. <a href="https://github.com/SAM-BIM/SAM_Deploy/blob/sow/2026-Q3/RELEASE_VALIDATION.md" target="_blank" rel="noopener noreferrer">Acceptance record</a>.</p>
         </article>
         <article class="card">
           <h3>Engine cross-check</h3>
-          <p>SAM's CIBSE TM59 assessment reproduces Tas's own Domestic Overheating report space by space on the validation model, with scope differences stated rather than hidden. <a href="https://github.com/SAM-BIM/SAM/blob/sow/2026-Q3/documentation/PartO-TAS-VALIDATION.md" target="_blank" rel="noopener noreferrer">Validation record</a>.</p>
+          <p>On the recorded validation flat, SAM's CIBSE TM59 figures match Tas's own Domestic Overheating report on every occupied-space criterion exercised. Scope differences, limitations and open defects are stated in the same record, not hidden. <a href="https://github.com/SAM-BIM/SAM/blob/sow/2026-Q3/documentation/PartO-TAS-VALIDATION.md" target="_blank" rel="noopener noreferrer">Validation record</a>.</p>
         </article>
         <article class="card">
           <h3>Regulatory traceability</h3>
-          <p>Part F (Approved Document F, 2021) is implemented with paragraph-level traceability: each requirement mapped to the calculation, the check and its evidence. <a href="https://github.com/SAM-BIM/SAM/blob/sow/2026-Q3/documentation/PartF-ADF-Volume1-2021-Traceability.md" target="_blank" rel="noopener noreferrer">Traceability matrix</a>.</p>
+          <p>Approved Document F (Volume 1, 2021) requirements for new dwellings with MVHR are traced paragraph by paragraph: each is calculated, read from the model geometry, left as a signed manual check, or stated out of scope. An assessment, not a certification. <a href="https://github.com/SAM-BIM/SAM/blob/sow/2026-Q3/documentation/PartF-ADF-Volume1-2021-Traceability.md" target="_blank" rel="noopener noreferrer">Traceability matrix</a>.</p>
         </article>
         <article class="card">
           <h3>Peer-reviewed lineage</h3>
@@ -135,7 +135,7 @@
         </article>
         <article class="card">
           <h3>Installable Windows release</h3>
-          <p>Versioned installer with release notes, supported on Rhino 8/9, Revit and the SAM desktop apps. <a href="https://github.com/SAM-BIM/SAM_Deploy/releases/latest" target="_blank" rel="noopener noreferrer">Latest release</a>.</p>
+          <p>Versioned installer with release notes, supported on Rhino 8/9, Revit and the SAM desktop apps. The Part F / Part O workflow on this page is on the 2026-Q3 release line; installers published before the 2026-Q3 release do not include it. <a href="https://github.com/SAM-BIM/SAM_Deploy/releases/latest" target="_blank" rel="noopener noreferrer">Latest release</a>.</p>
         </article>
       </div>
     </section>
@@ -176,7 +176,7 @@
         <div class="step">
           <span class="num">03</span>
           <strong>Equipment decision</strong>
-          <span>Ventilation units are selected against a shipped manufacturer catalogue; the selected unit's capacity then acts as a ceiling the design may not exceed.</span>
+          <span>Ventilation units are selected against a manufacturer catalogue; the selected unit's capacity then acts as a ceiling the design may not exceed.</span>
           <!-- EVIDENCE SLOT E03: assets/evidence/E03_SAM_PartO_Prepare_Run_Status.png -->
           <div class="evidence-slot" data-evidence="E03">
             <div>
@@ -251,7 +251,7 @@
         <div class="arrow" aria-hidden="true">&darr;</div>
         <div class="layer">
           <h3>Simulation adapters</h3>
-          <p>Tas <span class="tag shipped">Shipped</span> &nbsp; OpenStudio <span class="tag dev">In development</span></p>
+          <p>Tas <span class="tag shipped">Validated</span> &nbsp; OpenStudio <span class="tag dev">In development</span></p>
         </div>
         <div class="arrow" aria-hidden="true">&darr;</div>
         <div class="layer">
@@ -275,18 +275,18 @@
     <section id="depth" class="band soft">
       <span class="kicker">Engineering depth</span>
       <h2>Beyond model conversion</h2>
-      <p class="lead">SAM is engineering software with a model attached, not a converter with engineering aspirations. Status labels are exact: <span class="tag shipped">Shipped</span> means released and evidenced; <span class="tag dev">In development</span> means public code, not presented as finished.</p>
+      <p class="lead">SAM is engineering software with a model attached, not a converter with engineering aspirations. Status labels are exact: <span class="tag shipped">Validated</span> means merged on the 2026-Q3 release line with recorded test and acceptance evidence; <span class="tag progress">In progress</span> means part of the capability is validated and the open remainder is stated; <span class="tag dev">In development</span> means public code, not presented as finished.</p>
 
       <div class="grid cols-3 mt-16">
         <article class="card">
           <h3>Building physics &amp; compliance workflows</h3>
-          <p>Part F ventilation with paragraph-level regulatory traceability; Part O overheating iterations (base MVHR, natural ventilation, equipment selection, capacity ceiling) driving Tas simulation and CIBSE TM59 assessment.</p>
-          <span class="tag shipped">Shipped</span>
+          <p>Part F ventilation with paragraph-level regulatory traceability. Part O overheating Iterations 1a&ndash;2B (base MVHR, base natural ventilation, equipment selection, capacity-ceiling optimisation) were frozen in September 2026 after licensed Tas runs with CIBSE TM59 assessment. Iteration 2 acoustic restriction, bypass and boost are not yet implemented; open natural-ventilation items are listed in the validation record.</p>
+          <span class="tag shipped">Validated</span>
         </article>
         <article class="card">
           <h3>HVAC &amp; ventilation systems</h3>
-          <p>Reusable plant-room and system templates, automated scenario generation, and equipment selection against a shipped manufacturer catalogue with an enforced capacity ceiling.</p>
-          <span class="tag shipped">Shipped</span>
+          <p>Reusable plant-room and system templates; deterministic generation of explicit mechanical-ventilation systems from the analytical design; ventilation-unit selection against a manufacturer catalogue, with the selected unit's capacity enforced as a ceiling and never used as a design airflow.</p>
+          <span class="tag shipped">Validated</span>
           <!-- EVIDENCE SLOT E05: assets/evidence/E05_SAM_PartO_Iteration2B_Optimisation.png -->
           <div class="evidence-slot" data-evidence="E05">
             <div>
@@ -297,8 +297,8 @@
         </article>
         <article class="card">
           <h3>Psychrometrics</h3>
-          <p>Moist-air calculations, Mollier chart plotting and air-process loads, numerically validated against published reference data (ASHRAE, PsychroLib, IAPWS-IF97).</p>
-          <span class="tag shipped">Shipped</span>
+          <p>Moist-air calculations built on the PsychroLib reference formulation, IAPWS-IF97 water and steam properties, Mollier chart plotting and air-process loads; SAM_Mollier is described in a peer-reviewed CESBP 2025 paper.</p>
+          <span class="tag shipped">Validated</span>
           <!-- EVIDENCE SLOT E07: assets/evidence/E07_SAM_AHU_Mollier.png -->
           <div class="evidence-slot" data-evidence="E07">
             <div>
@@ -310,7 +310,7 @@
         <article class="card">
           <h3>BIM / BEM interoperability</h3>
           <p>Analytical-model generation in Revit (add-in and Rhino.Inside.Revit; Revit 2025&ndash;2027 covered by release acceptance) and Rhino 8/9; IFC, gbXML, IES VE GEM, BHoM and Honeybee schema exchange.</p>
-          <span class="tag shipped">Shipped</span>
+          <span class="tag shipped">Validated</span>
           <!-- EVIDENCE SLOT E09: assets/evidence/E09_SAM_Revit_Integration.png -->
           <div class="evidence-slot" data-evidence="E09">
             <div>
@@ -322,12 +322,12 @@
         <article class="card">
           <h3>Simulation orchestration</h3>
           <p>Deterministic scenario preparation, execution and result extraction through the Tas adapter (TBD/TSD/T3D exchange), with run diagnostics persisted per scenario.</p>
-          <span class="tag shipped">Shipped</span>
+          <span class="tag shipped">Validated</span>
         </article>
         <article class="card">
           <h3>Engineering-software validation</h3>
-          <p>TM59 assessment cross-checked against Tas's own report; psychrometrics against ASHRAE / PsychroLib / IAPWS references; H1&ndash;H12 release acceptance on real host applications.</p>
-          <span class="tag shipped">Shipped</span>
+          <p>TM59 assessment cross-checked against Tas's own report on a validation flat; licensed Tas acceptance runs recorded per Part O iteration; H1&ndash;H12 release acceptance on real host applications.</p>
+          <span class="tag shipped">Validated</span>
           <!-- EVIDENCE SLOT E08: assets/evidence/E08_SAM_Release_Validation_H1_H12.png -->
           <div class="evidence-slot" data-evidence="E08">
             <div>
@@ -338,6 +338,15 @@
         </article>
       </div>
 
+      <h3 class="mt-22">In progress</h3>
+      <article class="card">
+        <h3>Part O Iteration 3: explicit ventilation systems</h3>
+        <p>Simulates the same analytical design through explicit MVHR systems in Tas Systems, instead of inter-zone air movements, and applies the unchanged TM59 assessment.</p>
+        <p class="mt-10"><strong>Validated:</strong> the route's foundation, frozen in September 2026 after licensed acceptance against the reference route (identical TM59 outcomes in all 8 assessed rooms), and a selected-product cooling module (thermal only: no compressor or electrical model). The route has also completed end to end on a real project, which fails TM59 under its 2050s design weather with and without that module &mdash; a reported result, not a pass.</p>
+        <p class="mt-10"><strong>Open:</strong> certified manufacturer heat-recovery and fan performance (not yet sourced, so that mode refuses rather than guesses), a pending Tas clarification on active heat recovery, and native Tas Systems resultant temperature (a documented bridge stands in). <a href="https://github.com/SAM-BIM/SAM/issues/111" target="_blank" rel="noopener noreferrer">Programme tracker</a></p>
+        <span class="tag progress">In progress</span>
+      </article>
+
       <h3 class="mt-22">In development</h3>
       <div class="grid cols-2">
         <article class="card">
@@ -347,7 +356,7 @@
         </article>
         <article class="card">
           <h3>Native watertight geometry (SAM_OCCT)</h3>
-          <p>An Open Cascade geometry kernel inside SAM: sewing and healing of open shells, booleans, STEP/IGES exchange &mdash; tested, with CI, not yet wired into the SAM core model. <a href="https://github.com/SAM-BIM/SAM_OCCT" target="_blank" rel="noopener noreferrer">SAM_OCCT</a></p>
+          <p>An Open Cascade geometry kernel for SAM: closed-shell creation and repair, booleans, STEP/IGES exchange and adjacency-cluster building as Grasshopper components &mdash; tested, with CI, not yet wired into the SAM core model. <a href="https://github.com/SAM-BIM/SAM_OCCT" target="_blank" rel="noopener noreferrer">SAM_OCCT</a></p>
           <span class="tag dev">In development</span>
         </article>
       </div>

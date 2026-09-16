@@ -109,7 +109,7 @@ li{margin:5px 0}
 .tag{display:inline-block;border:1px solid #bdbdbd;color:var(--muted);padding:2px 7px;margin:4px 6px 0 0;font-size:11px;font-weight:600;text-transform:none;letter-spacing:0;background:#fafafa}
 .tag.shipped{background:var(--green);border-color:var(--green);color:#ffffff;font-weight:700}
 .tag.dev{background:var(--yellow);border-color:var(--yellow);color:#111111;font-weight:700}
-.tag.future{background:#ffffff;border-color:var(--blue);color:var(--blue);font-weight:700}
+.tag.future,.tag.progress{background:#ffffff;border-color:var(--blue);color:var(--blue);font-weight:700}
 
 /* Figures (used by workflow screenshots) */
 figure{margin:18px 0}

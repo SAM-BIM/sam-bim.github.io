@@ -34,9 +34,26 @@ live and the capture is outstanding.
 | V1 | (video, ~3 min) | Workflow section footer (VIDEO SLOT comment) | Flagship end-to-end workflow demonstration | Planned | PENDING |
 | D1 | (diagram) | Platform section (ARCHITECTURE SLOT comment) — replaces the text stack | SAM platform architecture diagram | Planned | PENDING |
 
+Status last checked 2026-09-16: no approved capture exists for any ID. Working
+screenshots found on the development machines were not used — they are not
+approved captures, and some show local paths, desktop chrome or project data.
+
 ## Rules
 
-- Captures are real screenshots of the shipped `sow/2026-Q3` capability only.
-  Nothing from the unfinished Part O Iteration 3 route.
+- Captures are real screenshots of capability merged on the `sow/2026-Q3`
+  release line, taken from a Release build of that line.
+- Part O Iterations 1a / 1b / 2 / 2B (frozen 2026-09-08) may be shown as
+  validated capability. Do not show an Iteration 2 acoustic-restriction, bypass
+  or boost result: those behaviours are not implemented.
+- Part O Iteration 3 may appear only as **in progress**, and only as what is
+  evidenced: the frozen, licensed-accepted foundation route (explicit MVHR
+  systems in Tas Systems, Reference A vs Candidate B) or the selected-product
+  cooling mode. Never present Iteration 3 as complete (tracker
+  [SAM#111](https://github.com/SAM-BIM/SAM/issues/111) is open), never show
+  manufacturer heat-recovery or fan behaviour (evidence-blocked, fails closed),
+  and never caption the recorded real-project run as a pass (no stage passes
+  TM59 on it).
+- No client or project-identifying data, personal or employer file paths,
+  usernames, taskbars or other desktop chrome in frame.
 - PNG for screenshots; keep them legible at ~1120 px content width.
 - Do not commit dummy or AI-generated imagery.
