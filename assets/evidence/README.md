@@ -4,35 +4,17 @@ This directory holds the curated evidence captures referenced by the SAM
 website. Every image here is a real screenshot of SAM software. Nothing is
 mocked up, AI-generated or edited beyond cropping.
 
-## Drop-in procedure (remaining IDs)
-
-1. Save the capture with the exact filename below.
-2. In `index.html`, find the matching `EVIDENCE SLOT` / `VIDEO SLOT` /
-   `ARCHITECTURE SLOT` comment and insert a `<figure class="shot">` following
-   the E01–E04 figures (image `width`/`height` attributes set to the file's
-   pixel size, meaningful `alt`, caption with the ID).
-3. Record the capture provenance below and set its status to `CAPTURED`.
-
 ## Manifest
 
-Status vocabulary: `CAPTURED` — the real screenshot/diagram is committed in
-this directory and wired into the page; `PENDING` — the slot is marked in
-`index.html` and the capture is outstanding (not rendered on the page).
+Every file listed is committed in this directory and wired into the page.
 
-| ID | Filename | Website location | Caption (as published) | Priority | Status |
-|---|---|---|---|---|---|
-| E01 | `E01_SAM_PartF_Design_Airflow_Overlay.png` | Hero; social preview image | The SAM analytical model in the SAM Analytical desktop app: engineering data reviewed directly on the model, here ventilation requirements beside design airflows. (Legend: F = Part F requirement, D = design airflow.) | Primary | CAPTURED |
-| E01 (detail) | `E01_SAM_PartF_Design_Airflow_Overlay_Detail.png` | Workflow step 01 | Bedroom supply: Part F requires 63 l/s; the design holds 143 l/s. Two quantities on one plan. | Primary | CAPTURED |
-| E02 | `E02_SAM_PartO_Review_Iteration_Authority.png` | Workflow step 02 | The regulatory requirement, engineering design and selected equipment capacity remain separate decisions. | Primary | CAPTURED |
-| E03 | `E03_SAM_PartO_Prepare_Run_Status.png` | Workflow step 03 | SAM materialises the engineering design into a deterministic simulation scenario and records the run state. | Primary | CAPTURED |
-| E04 | `E04_SAM_PartO_TM59_Result.png` | Workflow step 04 | Example TM59 assessment showing the recorded room-level outcome; SAM reports the result rather than forcing a pass. | Primary | CAPTURED |
-| E05 | `E05_SAM_PartO_Iteration2B_Optimisation.png` | Capabilities — HVAC & systems | Iteration 2B capacity-ceiling optimisation | Secondary | PENDING |
-| E06 | `E06_SAM_Analytical_Model_Context.png` | Capabilities — Analytical modelling | Analytical model in context | Primary | PENDING |
-| E07 | `E07_SAM_AHU_Mollier.png` | Capabilities — HVAC & systems | Air-handling processes on the Mollier chart | Secondary | PENDING |
-| E08 | `E08_SAM_Release_Validation_H1_H12.png` | Evidence — Release acceptance | H1–H12 release acceptance evidence | Secondary | PENDING |
-| E09 | `E09_SAM_Revit_Integration.png` | Capabilities — BIM & geometry interoperability | Revit integration | Secondary | PENDING |
-| V1 | (video, ~3 min) | Workflow section (VIDEO SLOT comment) | Flagship end-to-end workflow demonstration | Planned | PENDING |
-| D1 | (diagram) | Platform section (ARCHITECTURE SLOT comment) — replaces the CSS stack | SAM platform architecture diagram | Planned | PENDING |
+| ID | Filename | Website location | Caption (as published) | Priority |
+|---|---|---|---|---|
+| E01 | `E01_SAM_PartF_Design_Airflow_Overlay.png` | Hero; social preview image | The SAM analytical model in the SAM Analytical desktop app: engineering data reviewed directly on the model, here ventilation requirements beside design airflows. (Legend: F = Part F requirement, D = design airflow.) | Primary |
+| E01 (detail) | `E01_SAM_PartF_Design_Airflow_Overlay_Detail.png` | Workflow step 01 | Bedroom supply: Part F requires 63 l/s; the design holds 143 l/s. Two quantities on one plan. | Primary |
+| E02 | `E02_SAM_PartO_Review_Iteration_Authority.png` | Workflow step 02 | The regulatory requirement, engineering design and selected equipment capacity remain separate decisions. | Primary |
+| E03 | `E03_SAM_PartO_Prepare_Run_Status.png` | Workflow step 03 | SAM materialises the engineering design into a deterministic simulation scenario and records the run state. | Primary |
+| E04 | `E04_SAM_PartO_TM59_Result.png` | Workflow step 04 | Example TM59 assessment showing the recorded room-level outcome; SAM reports the result rather than forcing a pass. | Primary |
 
 ## Provenance of E01–E04 (captured 2026-09-16)
 

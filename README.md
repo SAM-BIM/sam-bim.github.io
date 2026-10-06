@@ -3,12 +3,10 @@ SAM-BIM official website
 
 ## Evidence assets
 
-Screenshots and diagrams referenced by the homepage live in
+Screenshots referenced by the homepage live in
 [`assets/evidence/`](assets/evidence/README.md). That manifest lists the exact
-filenames (E01–E09, V1, D1), their homepage slots and the drop-in procedure.
-E01–E04 are real SAM captures with their provenance recorded there; the
-remaining IDs are marked as comment slots in `index.html`. Never commit dummy,
-mocked-up or AI-generated imagery.
+filenames (E01–E04), where each is used and its provenance. Never commit
+dummy, mocked-up or AI-generated imagery.
 
 ## License
 

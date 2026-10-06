@@ -120,7 +120,6 @@
         </div>
 
         <div class="platform">
-          <!-- ARCHITECTURE SLOT D1: replace this CSS architecture with the D1 platform diagram when it exists. -->
           <div>
             <div class="arch">
               <div class="tier">
@@ -179,7 +178,6 @@
           <article class="family">
             <h3>Analytical modelling</h3>
             <p>Spaces, panels, apertures, adjacency, materials, constructions, profiles, internal conditions, systems and results in one model &mdash; inspected and edited in the SAM desktop apps.</p>
-            <!-- EVIDENCE SLOT E06: assets/evidence/E06_SAM_Analytical_Model_Context.png -->
             <ul class="mods">
               <li><a href="https://github.com/SAM-BIM/SAM" target="_blank" rel="noopener noreferrer">SAM</a></li>
               <li><a href="https://github.com/SAM-BIM/SAM_UI" target="_blank" rel="noopener noreferrer">SAM_UI</a></li>
@@ -188,7 +186,6 @@
           <article class="family">
             <h3>BIM &amp; geometry interoperability</h3>
             <p>Analytical models from Revit 2025&ndash;2027 and Rhino 8/9, with IFC, gbXML, IES VE GEM, BHoM and Ladybug Tools exchange. A watertight Open Cascade geometry kernel is in development.</p>
-            <!-- EVIDENCE SLOT E09: assets/evidence/E09_SAM_Revit_Integration.png -->
             <ul class="mods">
               <li><a href="https://github.com/SAM-BIM/SAM_Revit" target="_blank" rel="noopener noreferrer">SAM_Revit</a></li>
               <li><a href="https://github.com/SAM-BIM/SAM_Rhino_UI" target="_blank" rel="noopener noreferrer">SAM_Rhino_UI</a></li>
@@ -209,8 +206,6 @@
           <article class="family">
             <h3>HVAC &amp; systems</h3>
             <p>Building systems as explicit engineering networks: plant rooms, air handling and ventilation, catalogue equipment selection, and psychrometric air processes on the Mollier chart.</p>
-            <!-- EVIDENCE SLOT E05: assets/evidence/E05_SAM_PartO_Iteration2B_Optimisation.png -->
-            <!-- EVIDENCE SLOT E07: assets/evidence/E07_SAM_AHU_Mollier.png -->
             <ul class="mods">
               <li><a href="https://github.com/SAM-BIM/SAM_Systems" target="_blank" rel="noopener noreferrer">SAM_Systems</a></li>
               <li><a href="https://github.com/SAM-BIM/SAM_Mollier" target="_blank" rel="noopener noreferrer">SAM_Mollier</a></li>
@@ -347,8 +342,6 @@
           <p class="muted">SAM supports engineering workflows that contribute to assessment methods; compliance depends on the complete project methodology. A TM59 pass is an overheating result, not a Part O compliance certificate.</p>
         </div>
 
-        <!-- VIDEO SLOT V1: ~3-minute flagship workflow video. Insert an embedded player here when V1 exists. -->
-
         <div id="principle" class="quantities">
           <span class="kicker">Engineering principle</span>
           <h2>Different engineering concepts stay different objects</h2>
@@ -394,14 +387,13 @@
         <div class="proof">
           <article class="proof-item">
             <h3>Automated testing</h3>
-            <p>Model, desktop-app, HVAC-systems and simulation regression suites run at each merged milestone.</p>
-            <a class="link arrow-r" href="https://github.com/SAM-BIM/SAM/blob/sow/2026-Q3/PROJECT_PROGRESS.md" target="_blank" rel="noopener noreferrer">Progress record </a>
+            <p>The core SAM model regression suite runs in continuous integration on every pull request and push.</p>
+            <a class="link arrow-r" href="https://github.com/SAM-BIM/SAM/actions/workflows/test.yml" target="_blank" rel="noopener noreferrer">CI test runs </a>
           </article>
           <article class="proof-item">
             <h3>Release acceptance</h3>
-            <p>Installers checked on real Rhino 8/9 and Revit 2025&ndash;2027 hosts against a documented acceptance matrix.</p>
-            <!-- EVIDENCE SLOT E08: assets/evidence/E08_SAM_Release_Validation_H1_H12.png -->
-            <a class="link arrow-r" href="https://github.com/SAM-BIM/SAM_Deploy/blob/sow/2026-Q3/RELEASE_VALIDATION.md" target="_blank" rel="noopener noreferrer">Acceptance record </a>
+            <p>The published installer is built and payload-checked in CI and was smoke-tested manually in Rhino, Grasshopper, the Revit add-in and Rhino.Inside.Revit. The wider clean-install, upgrade and uninstall <a href="https://github.com/SAM-BIM/SAM_Deploy/blob/sow/2026-Q3/RELEASE_VALIDATION.md" target="_blank" rel="noopener noreferrer">acceptance matrix</a> was not re-run for this build.</p>
+            <a class="link arrow-r" href="https://github.com/SAM-BIM/SAM_Deploy/releases/tag/v20261006.1" target="_blank" rel="noopener noreferrer">Release acceptance notes </a>
           </article>
           <article class="proof-item">
             <h3>Simulation cross-checks</h3>
